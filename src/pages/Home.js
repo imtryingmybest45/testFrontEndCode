@@ -1,3 +1,4 @@
+import Howdy from './Howdy';
 import HelpMePlease from './HelpMePlease';
 import WowYouCanReallyDance from './WowYouCanReallyDance';
 import TheDescent from './TheDescent';
@@ -37,6 +38,7 @@ function Home(props){
   { id: 8, text: 'The Descent', to: '/TheDescent' },
   { id: 9, text: 'Wow You Can Really Dance', to: '/WowYouCanReallyDance' },
   { id: 10, text: 'Help Me Please', to: '/HelpMePlease' },
+  { id: 11, text: 'Howdy', to: '/Howdy' },
   ];
   return (
     <div>
@@ -54,6 +56,7 @@ function Home(props){
         <Route path="/TheDescent" element={<TheDescent name = {stvar}/>} />
         <Route path="/WowYouCanReallyDance" element={<WowYouCanReallyDance name = {stvar}/>} />
         <Route path="/HelpMePlease" element={<HelpMePlease name = {stvar}/>} />
+        <Route path="/Howdy" element={<Howdy name = {stvar}/>} />
       </Routes>
       <nav>
         <ul style={{listStyleType: 'none'}}>
