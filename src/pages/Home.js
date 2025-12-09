@@ -1,3 +1,4 @@
+import WhereAreUNow from './WhereAreUNow';
 import HerHeartIsBreaking from './HerHeartIsBreaking';
 import TakenItsToll from './TakenItsToll';
 import ThisLoveHas from './ThisLoveHas';
@@ -47,6 +48,7 @@ function Home(props){
   { id: 13, text: 'This Love Has', to: '/ThisLoveHas' },
   { id: 14, text: 'Taken Its Toll', to: '/TakenItsToll' },
   { id: 15, text: 'Her Heart is Breaking', to: '/HerHeartIsBreaking' },
+  { id: 16, text: 'Where Are U Now', to: '/WhereAreUNow' },
   ];
   return (
     <div>
@@ -69,6 +71,7 @@ function Home(props){
         <Route path="/ThisLoveHas" element={<ThisLoveHas name = {stvar}/>} />
         <Route path="/TakenItsToll" element={<TakenItsToll name = {stvar}/>} />
         <Route path="/HerHeartIsBreaking" element={<HerHeartIsBreaking name = {stvar}/>} />
+        <Route path="/WhereAreUNow" element={<WhereAreUNow name = {stvar}/>} />
       </Routes>
       <nav>
         <ul style={{listStyleType: 'none'}}>
