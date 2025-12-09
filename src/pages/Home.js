@@ -1,3 +1,5 @@
+import HelpMePlease from './HelpMePlease';
+import WowYouCanReallyDance from './WowYouCanReallyDance';
 import TheDescent from './TheDescent';
 import Sinister from './Sinister';
 import TheAutopsyofJaneDoe from './TheAutopsyofJaneDoe';
@@ -33,6 +35,8 @@ function Home(props){
   { id: 6, text: 'The Autopsy of Jane Doe', to: '/TheAutopsyofJaneDoe' },
   { id: 7, text: 'Sinister', to: '/Sinister' },
   { id: 8, text: 'The Descent', to: '/TheDescent' },
+  { id: 9, text: 'Wow You Can Really Dance', to: '/WowYouCanReallyDance' },
+  { id: 10, text: 'Help Me Please', to: '/HelpMePlease' },
   ];
   return (
     <div>
@@ -48,6 +52,8 @@ function Home(props){
         <Route path="/TheAutopsyofJaneDoe" element={<TheAutopsyofJaneDoe name = {stvar}/>} />
         <Route path="/Sinister" element={<Sinister name = {stvar}/>} />
         <Route path="/TheDescent" element={<TheDescent name = {stvar}/>} />
+        <Route path="/WowYouCanReallyDance" element={<WowYouCanReallyDance name = {stvar}/>} />
+        <Route path="/HelpMePlease" element={<HelpMePlease name = {stvar}/>} />
       </Routes>
       <nav>
         <ul style={{listStyleType: 'none'}}>
