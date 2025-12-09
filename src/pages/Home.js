@@ -1,3 +1,4 @@
+import MassacreTheNewAmericanDream from './MassacreTheNewAmericanDream';
 import WhereAreYouNowJBiebs from './WhereAreYouNowJBiebs';
 import WhereAreUNow from './WhereAreUNow';
 import HerHeartIsBreaking from './HerHeartIsBreaking';
@@ -51,6 +52,7 @@ function Home(props){
   { id: 15, text: 'Her Heart is Breaking', to: '/HerHeartIsBreaking' },
   { id: 16, text: 'Where Are U Now', to: '/WhereAreUNow' },
   { id: 17, text: 'Where Are You Now J Biebs', to: '/WhereAreYouNowJBiebs' },
+  { id: 18, text: 'Massacre the New American Dream', to: '/MassacreTheNewAmericanDream' },
   ];
   return (
     <div>
@@ -75,6 +77,7 @@ function Home(props){
         <Route path="/HerHeartIsBreaking" element={<HerHeartIsBreaking name = {stvar}/>} />
         <Route path="/WhereAreUNow" element={<WhereAreUNow name = {stvar}/>} />
         <Route path="/WhereAreYouNowJBiebs" element={<WhereAreYouNowJBiebs name = {stvar}/>} />
+        <Route path="/MassacreTheNewAmericanDream" element={<MassacreTheNewAmericanDream name = {stvar}/>} />
       </Routes>
       <nav>
         <ul style={{listStyleType: 'none'}}>
