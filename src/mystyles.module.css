@@ -1,0 +1,13 @@
+.bigblue {
+  color: DodgerBlue;
+  padding: 40px;
+  font-family: Arial;
+  text-align: center;
+}
+
+.bigred{
+  color: rgb(255, 30, 41);
+  padding: 20px;
+  font-family: Arial;
+  text-align: center; 
+}
