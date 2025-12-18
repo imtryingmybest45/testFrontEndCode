@@ -2,10 +2,12 @@ import {useState,useLayoutEffect,useRef} from 'react';
 import axios from 'axios';
 import "../App.css"
 
-function SubmissionPage(){
-    //const [value, setValue] = useState('');
+function SubmissionPage(props){
+    
     const value = '';
     const inputRef = useRef(null);
+    const inputRef2 = useRef(null);
+    const specialCharsRegex = /[^a-zA-Z0-9\s]/;
 
     useLayoutEffect(() => {
         if (inputRef.current) {
@@ -30,8 +32,18 @@ function SubmissionPage(){
 
     const handleSubmit = (e) => {
         e.preventDefault(); // Prevents default form submission behavior (page reload)
+        if (specialCharsRegex.test(formData.movieName)){
+            setMess("Movie name cannot contain non-alphanumeric characters.")
+        }
+        else if(/^[a-z]/.test(formData.movieName)){
+            setMess("First word of movie name must be uppercase.")
+        }
+        else{
+        setMess("Please wait, your review is loading.");
         axios.post('https://tryingthisagain-e6f8d0gqfmgsevft.eastus2-01.azurewebsites.net/genericEndpoint123',formData)
+        //axios.post('http://localhost:8080/genericEndpoint123',formData)
         .then(response => setMess(response.data))
+        }
     };
 
       return (
@@ -39,11 +51,11 @@ function SubmissionPage(){
             <form onSubmit={handleSubmit}>
                 <label className="linkss">
                     Movie Name:
-                    <textarea type="text" ref={inputRef} name="movieName" value={formData.movieName} onChange={handleChange} placeholder="MovieName" />
+                    <textarea className = "custom-input" type="text" ref={inputRef} name="movieName" value={formData.movieName} onChange={handleChange} placeholder="Input movie name" />
                 </label>
                 <label className="linkss2">
                     Movie Review:
-                    <textarea type="text" ref={inputRef} name="movieReview" value={formData.movieReview} onChange={handleChange} placeholder="MovieReview"/>
+                    <textarea className = "customInp" type="text" ref={inputRef2} name="movieReview" value={formData.movieReview} onChange={handleChange} placeholder="Write movie review here"/>
                 </label>
                 <button type="submit">Submit</button>
                 <p>{stvar}</p>

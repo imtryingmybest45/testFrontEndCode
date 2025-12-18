@@ -1,55 +1,53 @@
-import Hello from './Hello';
-import WowHello from './WowHello';
-import TheDescent from './TheDescent';
-import Sinister from './Sinister';
-import TheAutopsyofJaneDoe from './TheAutopsyofJaneDoe';
-import TheConjuring4 from './TheConjuring4';
-import TheConjuring from './TheConjuring';
-import TheConjuring3 from './TheConjuring3';
-import TheConjuring2 from './TheConjuring2';
 import Weapons from './Weapons';
+import Insidious from './Insidious';
+import TheConjuring2 from './TheConjuring2';
 import {Routes} from 'react-router-dom';
 import {Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
+import {useEffect} from 'react';
+import {useMemo} from 'react';
+//import {useState} from 'react-router-dom';
 
 function Home(props){
+
   let tfVar = props.name;
   let setTFVar = props.age;
+  let origMovName = props.origMovName;
+  //let prevPath = props.prevPath;
+  let setPrevPath = props.setPrevPath;
+  //let setReinit = props.setReinit;
+  let setReinit = props.setReinit;
+  const setLinks = props.linksStuff;
+
   const handleClick = () => {
+    setPrevPath(window.location.pathname);
     setTFVar(false);
   }
+
+  const linksData = useMemo(() => {
+    return [
+      { id: 1, text: 'The Conjuring 2', to: '/TheConjuring2' },
+      { id: 2, text: 'Insidious', to: '/Insidious' },
+      { id: 3, text: 'Weapons', to: '/Weapons'},
+    ];
+  }, []); // <-- Empty array ensures it's created only once
   const stvar = "hello";
-  const linksData = [
-  { id: 1, text: 'Weapons', to: '/Weapons' },
-  { id: 2, text: 'The Conjuring 2', to: '/TheConjuring2' },
-  { id: 3, text: 'The Conjuring 3', to: '/TheConjuring3' },
-  { id: 4, text: 'The Conjuring', to: '/TheConjuring' },
-  { id: 5, text: 'The Conjuring 4', to: '/TheConjuring4' },
-  { id: 6, text: 'The Autopsy of Jane Doe', to: '/TheAutopsyofJaneDoe' },
-  { id: 7, text: 'Sinister', to: '/Sinister' },
-  { id: 8, text: 'The Descent', to: '/TheDescent' },
-  { id: 9, text: 'Wow Hello', to: '/WowHello' },
-  { id: 10, text: 'Hello', to: '/Hello' },
-  ];
+  useEffect(() => {
+    setLinks(linksData);
+  },[linksData, setLinks]);
+
   return (
     <div>
       {tfVar&&<h1>Welcome to my website.</h1>}
       {tfVar&&<p>This is where I review horror movies.</p>}
       {tfVar&&<p>Click on a movie name to see the review.</p>}
       <Routes>
-        <Route path="/Weapons" element={<Weapons name = {stvar}/>} />
         <Route path="/TheConjuring2" element={<TheConjuring2 name = {stvar}/>} />
-        <Route path="/TheConjuring3" element={<TheConjuring3 name = {stvar}/>} />
-        <Route path="/TheConjuring" element={<TheConjuring name = {stvar}/>} />
-        <Route path="/TheConjuring4" element={<TheConjuring4 name = {stvar}/>} />
-        <Route path="/TheAutopsyofJaneDoe" element={<TheAutopsyofJaneDoe name = {stvar}/>} />
-        <Route path="/Sinister" element={<Sinister name = {stvar}/>} />
-        <Route path="/TheDescent" element={<TheDescent name = {stvar}/>} />
-        <Route path="/WowHello" element={<WowHello name = {stvar}/>} />
-        <Route path="/Hello" element={<Hello name = {stvar}/>} />
+        <Route path="/Insidious" element={<Insidious name = {setTFVar}/>} />
+        <Route path="/Weapons" element={<Weapons name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
       </Routes>
       <nav>
-        <ul style={{listStyleType: 'none'}}>
+        <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>
               {linksData.map((link) => (
               <li key={link.id}>
                   {tfVar&&<Link to={link.to} onClick = {()=>handleClick()}>{link.text}</Link>}
