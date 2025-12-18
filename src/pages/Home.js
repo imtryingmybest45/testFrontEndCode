@@ -8,21 +8,15 @@ import TheConjuring2 from './TheConjuring2';
 import Weapons from './Weapons';
 import {Routes} from 'react-router-dom';
 import {Route} from 'react-router-dom';
-import {useState} from 'react';
-import axios from 'axios';
 import {Link} from 'react-router-dom';
 
 function Home(props){
   let tfVar = props.name;
   let setTFVar = props.age;
-  const [stvar, setMess] = useState('');
-  const handleClick = (paramm) => {
-    //axios.post('http://localhost:8080/ftpEndpoint',paramm)
-    //axios.post('https://tryingthisagain-e6f8d0gqfmgsevft.eastus2-01.azurewebsites.net/ftpEndpoint',paramm)
-    //axios.get('http://localhost:8080/genericEndpoint')
-    //.then(response => setMess(response.data))
+  const handleClick = () => {
     setTFVar(false);
   }
+  const stvar = "hello";
   const linksData = [
   { id: 1, text: 'Weapons', to: '/Weapons' },
   { id: 2, text: 'The Conjuring 2', to: '/TheConjuring2' },
@@ -52,7 +46,7 @@ function Home(props){
         <ul style={{listStyleType: 'none'}}>
               {linksData.map((link) => (
               <li key={link.id}>
-                  {tfVar&&<Link to={link.to} onClick = {()=>handleClick(link.to)}>{link.text}</Link>}
+                  {tfVar&&<Link to={link.to} onClick = {()=>handleClick()}>{link.text}</Link>}
               </li>
               ))}
         </ul>
