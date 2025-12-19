@@ -19,8 +19,8 @@ function usePersistedState(key, defaultValue) {
 function TheConjuring2HellYeah(props){
 
     const origMovName = props.origMovName;
-    const movName = "The Conjuring 2 Hell Yeah";
-    const movVal = "This is the review for the Conjuring 2, hell yeah!";
+    const movName = "The Conjuring 2";
+    const movVal = "This is the review for the Conjuring 2.";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
