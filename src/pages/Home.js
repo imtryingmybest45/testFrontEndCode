@@ -1,3 +1,4 @@
+import TheAutopsyofJaneDoe from './TheAutopsyofJaneDoe';
 import TheAutopsyofJaneDoe2 from './TheAutopsyofJaneDoe2';
 import Conjuring2 from './Conjuring2';
 import Conjuring from './Conjuring';
@@ -35,6 +36,7 @@ function Home(props){
       { id: 4, text: 'Conjuring', to: '/Conjuring' },
       { id: 5, text: 'Conjuring 2', to: '/Conjuring2' },
       { id: 6, text: 'The Autopsy of Jane Doe 2', to: '/TheAutopsyofJaneDoe2' },
+      { id: 7, text: 'The Autopsy of Jane Doe', to: '/TheAutopsyofJaneDoe' },
     ];
   }, []); // <-- Empty array ensures it's created only once
   const stvar = "hello";
@@ -54,6 +56,7 @@ function Home(props){
         <Route path="/Conjuring" element={<Conjuring name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/Conjuring2" element={<Conjuring2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/TheAutopsyofJaneDoe2" element={<TheAutopsyofJaneDoe2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/TheAutopsyofJaneDoe" element={<TheAutopsyofJaneDoe name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
       </Routes>
       <nav>
         <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>
