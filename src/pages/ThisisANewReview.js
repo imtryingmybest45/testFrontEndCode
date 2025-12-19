@@ -16,11 +16,10 @@ function usePersistedState(key, defaultValue) {
   return [state, setState];
 }
 
-function Weapons(props){
+function ThisisANewReview(props){
 
-    const origMovName = props.origMovName;
-    const movName = "Weapons";
-    const movVal = "Hello\nHow are you";
+    const movName = "And this is the new REview text";
+    const movVal = "Insert Movie Value Here";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
@@ -41,7 +40,6 @@ function Weapons(props){
         const [formData, setFormData] = usePersistedState("movInfo",{
             movieName: movName,
             movieReview: movVal,
-            origMovName: origMovName,
         });
     
         const handleChange = (e) => {
@@ -63,8 +61,8 @@ function Weapons(props){
         else{
         setMess("Please wait, your review is loading.");
         //axios.post('https://tryingthisagain-e6f8d0gqfmgsevft.eastus2-01.azurewebsites.net/genericEndpoint123',formData)
-        axios.post('http://localhost:8080/editEndpoint',formData)
-        .then(response => setMess(response.data))
+        //axios.post('http://localhost:8080/genericEndpoint123',formData)
+        //.then(response => setMess(response.data))
         }
     };
 
@@ -100,4 +98,4 @@ function Weapons(props){
     )
 }
 
-export default Weapons;
+export default ThisisANewReview;
