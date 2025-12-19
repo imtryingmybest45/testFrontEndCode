@@ -1,3 +1,4 @@
+import ThisisANewReview from './ThisisANewReview';
 import Insidious from './Insidious';
 import TheConjuring2 from './TheConjuring2';
 import {Routes} from 'react-router-dom';
@@ -27,6 +28,7 @@ function Home(props){
     return [
       { id: 1, text: 'The Conjuring 2', to: '/TheConjuring2' },
       { id: 2, text: 'Insidious', to: '/Insidious' },
+      { id: 3, text: 'This is A New Review', to: '/ThisisANewReview' },
     ];
   }, []); // <-- Empty array ensures it's created only once
   const stvar = "hello";
@@ -42,6 +44,7 @@ function Home(props){
       <Routes>
         <Route path="/TheConjuring2" element={<TheConjuring2 name = {stvar}/>} />
         <Route path="/Insidious" element={<Insidious name = {setTFVar}/>} />
+        <Route path="/ThisisANewReview" element={<ThisisANewReview name = {setTFVar}/>} />
       </Routes>
       <nav>
         <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>
