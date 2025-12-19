@@ -1,3 +1,4 @@
+import Insidious from './Insidious';
 import TheConjuring2 from './TheConjuring2';
 import {Routes} from 'react-router-dom';
 import {Route} from 'react-router-dom';
