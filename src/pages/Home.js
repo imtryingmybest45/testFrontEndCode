@@ -1,4 +1,4 @@
-import Insidious from './Insidious';
+import TheConjuring2HellYeah from './TheConjuring2HellYeah';
 import TheConjuring2 from './TheConjuring2';
 import {Routes} from 'react-router-dom';
 import {Route} from 'react-router-dom';
