@@ -16,11 +16,11 @@ function usePersistedState(key, defaultValue) {
   return [state, setState];
 }
 
-function TheConjuringChapter2(props){
+function TheConjuring2(props){
 
     const origMovName = props.origMovName;
-    const movName = "The Conjuring Chapter 2";
-    const movVal = "This is the review for the Conjuring Chapter 2.";
+    const movName = "The Conjuring 2";
+    const movVal = "This is the review for the Conjuring 2.";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
@@ -100,4 +100,4 @@ function TheConjuringChapter2(props){
     )
 }
 
-export default TheConjuringChapter2;
+export default TheConjuring2;

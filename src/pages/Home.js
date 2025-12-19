@@ -1,4 +1,3 @@
-import TheConjuringChapter2 from './TheConjuringChapter2';
 import TheConjuring2 from './TheConjuring2';
 import {Routes} from 'react-router-dom';
 import {Route} from 'react-router-dom';
