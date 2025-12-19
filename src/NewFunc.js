@@ -1,5 +1,6 @@
 import {useEffect} from 'react';
 import {useState,useLayoutEffect,useRef} from 'react';
+import axios from 'axios';
 
 function usePersistedState(key, defaultValue) {
   // Initialize state with value from localStorage if available
@@ -17,8 +18,9 @@ function usePersistedState(key, defaultValue) {
 
 function NewFunc(props){
 
-    const movName = "Insert shit here";
-    const movVal = "Insert Movie Value Here";
+    const origMovName = props.origMovName;
+    const movName = "Insert movie name here";
+    const movVal = "Insert shit here";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
@@ -39,6 +41,7 @@ function NewFunc(props){
         const [formData, setFormData] = usePersistedState("movInfo",{
             movieName: movName,
             movieReview: movVal,
+            origMovName: origMovName,
         });
     
         const handleChange = (e) => {
@@ -60,8 +63,8 @@ function NewFunc(props){
         else{
         setMess("Please wait, your review is loading.");
         //axios.post('https://tryingthisagain-e6f8d0gqfmgsevft.eastus2-01.azurewebsites.net/genericEndpoint123',formData)
-        //axios.post('http://localhost:8080/genericEndpoint123',formData)
-        //.then(response => setMess(response.data))
+        axios.post('http://localhost:8080/editEndpoint',formData)
+        .then(response => setMess(response.data))
         }
     };
 
