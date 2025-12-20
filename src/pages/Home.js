@@ -7,7 +7,7 @@ import Autopsy2 from './Autopsy2';
 import Weapons from './Weapons';
 import Weapons2 from './Weapons2';
 import IKnowWhatyouDidLastSummer from './IKnowWhatyouDidLastSummer';
-import TheConjuring4 from './TheConjuring4';
+import TheConjuringChapter4 from './TheConjuringChapter4';
 import TheConjuring from './TheConjuring';
 import TheConjuring3 from './TheConjuring3';
 import Insidious from './Insidious';
@@ -41,7 +41,7 @@ function Home(props){
       { id: 2, text: 'Insidious', to: '/Insidious' },
       { id: 3, text: 'The Conjuring 3', to: '/TheConjuring3' },
       { id: 4, text: 'The Conjuring', to: '/TheConjuring' },
-      { id: 5, text: 'The Conjuring 4', to: '/TheConjuring4' },
+      { id: 5, text: 'The Conjuring Chapter 4', to: '/TheConjuringChapter4' },
       { id: 6, text: 'I Know What you Did Last Summer', to: '/IKnowWhatyouDidLastSummer' },
       { id: 7, text: 'Weapons 2', to: '/Weapons2' },
       { id: 8, text: 'Weapons', to: '/Weapons' },
@@ -68,7 +68,7 @@ function Home(props){
         <Route path="/Insidious" element={<Insidious name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/TheConjuring3" element={<TheConjuring3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/TheConjuring" element={<TheConjuring name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/TheConjuring4" element={<TheConjuring4 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/TheConjuringChapter4" element={<TheConjuringChapter4 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/IKnowWhatyouDidLastSummer" element={<IKnowWhatyouDidLastSummer name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/Weapons2" element={<Weapons2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/Weapons" element={<Weapons name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
