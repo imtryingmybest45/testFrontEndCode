@@ -16,11 +16,11 @@ function usePersistedState(key, defaultValue) {
   return [state, setState];
 }
 
-function Thisisa(props){
+function ThisisaChapter4(props){
 
     const origMovName = props.origMovName;
-    const movName = "This is a";
-    const movVal = "here we go this is a";
+    const movName = "This is a Chapter 4";
+    const movVal = "here we go this is a, whow\n\nWhere is I am\n\ntext chain\n\nFUNCHY THE SNOWWOMAN";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
@@ -101,4 +101,4 @@ function Thisisa(props){
     )
 }
 
-export default Thisisa;
+export default ThisisaChapter4;
