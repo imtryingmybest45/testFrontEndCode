@@ -20,7 +20,7 @@ function NewFunc(props){
 
     const origMovName = props.origMovName;
     const movName = "Insert movie name here";
-    const movVal = "Insert movie review here";
+    const movVal = 'Insert movie review here';
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
@@ -54,11 +54,15 @@ function NewFunc(props){
 
     const handleSubmit = (e) => {
         e.preventDefault(); // Prevents default form submission behavior (page reload)
+        const movieRev = formData.movieReview;
         if (specialCharsRegex.test(formData.movieName)){
             setMess("Movie name cannot contain non-alphanumeric characters.")
         }
         else if(/^[a-z]/.test(formData.movieName)){
             setMess("First word of movie name must be uppercase.")
+        }
+        else if(movieRev.includes("'")){
+            setMess("Movie review cannot contain single quotes.")
         }
         else{
         setMess("Please wait, your review is loading.");
