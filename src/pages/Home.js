@@ -1,3 +1,4 @@
+import LetsTryAgain from './LetsTryAgain';
 import AndImupposedtoa from './AndImupposedtoa';
 import IamaddingANewreview from './IamaddingANewreview';
 import ThisMovieNameiscompletelydifferentnow from './ThisMovieNameiscompletelydifferentnow';
@@ -49,6 +50,7 @@ function Home(props){
       { id: 12, text: 'This Movie Name is completely different now', to: '/ThisMovieNameiscompletelydifferentnow' },
       { id: 13, text: 'I am adding A New review', to: '/IamaddingANewreview' },
       { id: 14, text: 'And Im upposed to a', to: '/AndImupposedtoa' },
+      { id: 15, text: 'Lets Try Again', to: '/LetsTryAgain' },
     ];
   }, []); // <-- Empty array ensures it's created only once
   const stvar = "hello";
@@ -76,6 +78,7 @@ function Home(props){
         <Route path="/ThisMovieNameiscompletelydifferentnow" element={<ThisMovieNameiscompletelydifferentnow name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/IamaddingANewreview" element={<IamaddingANewreview name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/AndImupposedtoa" element={<AndImupposedtoa name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/LetsTryAgain" element={<LetsTryAgain name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
       </Routes>
       <nav>
         <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>
