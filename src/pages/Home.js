@@ -1,3 +1,4 @@
+import TheConjuringChapter from './TheConjuringChapter';
 import TheConjuringChapter4 from './TheConjuringChapter4';
 import {Routes} from 'react-router-dom';
 import {Route} from 'react-router-dom';
@@ -21,6 +22,7 @@ function Home(props){
   const linksData = useMemo(() => {
     return [
       { id: 1, text: 'The Conjuring Chapter 4', to: '/TheConjuringChapter4' },
+      { id: 2, text: 'The Conjuring Chapter', to: '/TheConjuringChapter' },
     ];
   }, []); // <-- Empty array ensures it's created only once
   //const stvar = "hello";
@@ -35,6 +37,7 @@ function Home(props){
       {tfVar&&<p>Click on a movie name to see the review.</p>}
       <Routes>
         <Route path="/TheConjuringChapter4" element={<TheConjuringChapter4 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/TheConjuringChapter" element={<TheConjuringChapter name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
       </Routes>
       <nav>
         <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>
