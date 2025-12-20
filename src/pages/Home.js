@@ -1,20 +1,6 @@
-import WhyDidthisa from './WhyDidthisa';
-import Afjd from './Afjd';
-import LetsTryAgain from './LetsTryAgain';
-import AndImupposedtoa from './AndImupposedtoa';
-import IamaddingANewreview from './IamaddingANewreview';
-import ThisMovieNameiscompletelydifferentnow from './ThisMovieNameiscompletelydifferentnow';
-import TheAutopsyofjanedoe3 from './TheAutopsyofjanedoe3';
-import TheAutopsyofjanedoe from './TheAutopsyofjanedoe';
-import TheAutopsyofjanedoe2Hereitis from './TheAutopsyofjanedoe2Hereitis';
 import TheDescent3 from './TheDescent3';
-import TheDescent from './TheDescent';
-import TheDescent2 from './TheDescent2';
-import FunchytheSnowwoman3 from './FunchytheSnowwoman3';
-import FunchytheSnowwoman2 from './FunchytheSnowwoman2';
-import FunchytheSnowwomanSheIsMyMom from './FunchytheSnowwomanSheIsMyMom';
 import Insidious from './Insidious';
-import TheConjuring from './TheConjuring';
+import TheConjuringChapter2 from './TheConjuringChapter2';
 import {Routes} from 'react-router-dom';
 import {Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
@@ -40,21 +26,7 @@ function Home(props){
     return [
       { id: 1, text: 'The Conjuring', to: '/TheConjuring' },
       { id: 2, text: 'Insidious', to: '/Insidious' },
-      { id: 3, text: 'Funchy the Snowwoman She Is My Mom', to: '/FunchytheSnowwomanSheIsMyMom' },
-      { id: 4, text: 'Funchy the Snowwoman 2', to: '/FunchytheSnowwoman2' },
-      { id: 5, text: 'Funchy the Snowwoman 3', to: '/FunchytheSnowwoman3' },
-      { id: 6, text: 'The Descent 2', to: '/TheDescent2' },
-      { id: 7, text: 'The Descent', to: '/TheDescent' },
-      { id: 8, text: 'The Descent 3', to: '/TheDescent3' },
-      { id: 9, text: 'The Autopsy of jane doe 2 Here it is', to: '/TheAutopsyofjanedoe2Hereitis' },
-      { id: 10, text: 'The Autopsy of jane doe', to: '/TheAutopsyofjanedoe' },
-      { id: 11, text: 'The Autopsy of jane doe 3', to: '/TheAutopsyofjanedoe3' },
-      { id: 12, text: 'This Movie Name is completely different now', to: '/ThisMovieNameiscompletelydifferentnow' },
-      { id: 13, text: 'I am adding A New review', to: '/IamaddingANewreview' },
-      { id: 14, text: 'And Im upposed to a', to: '/AndImupposedtoa' },
-      { id: 15, text: 'Lets Try Again', to: '/LetsTryAgain' },
-      { id: 16, text: 'Afjd', to: '/Afjd' },
-      { id: 17, text: 'Why Did this a', to: '/WhyDidthisa' },
+      { id: 3, text: 'The Descent 3', to: '/TheDescent3' },
     ];
   }, []); // <-- Empty array ensures it's created only once
   const stvar = "hello";
@@ -68,23 +40,9 @@ function Home(props){
       {tfVar&&<p>This is where I review horror movies.</p>}
       {tfVar&&<p>Click on a movie name to see the review.</p>}
       <Routes>
-        <Route path="/TheConjuring" element={<TheConjuring name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/TheConjuringChapter2" element={<TheConjuringChapter2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/Insidious" element={<Insidious name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/FunchytheSnowwomanSheIsMyMom" element={<FunchytheSnowwomanSheIsMyMom name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/FunchytheSnowwoman2" element={<FunchytheSnowwoman2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/FunchytheSnowwoman3" element={<FunchytheSnowwoman3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/TheDescent2" element={<TheDescent2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/TheDescent" element={<TheDescent name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/TheDescent3" element={<TheDescent3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/TheAutopsyofjanedoe2Hereitis" element={<TheAutopsyofjanedoe2Hereitis name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/TheAutopsyofjanedoe" element={<TheAutopsyofjanedoe name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/TheAutopsyofjanedoe3" element={<TheAutopsyofjanedoe3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/ThisMovieNameiscompletelydifferentnow" element={<ThisMovieNameiscompletelydifferentnow name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/IamaddingANewreview" element={<IamaddingANewreview name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/AndImupposedtoa" element={<AndImupposedtoa name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/LetsTryAgain" element={<LetsTryAgain name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/Afjd" element={<Afjd name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/WhyDidthisa" element={<WhyDidthisa name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
       </Routes>
       <nav>
         <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>
