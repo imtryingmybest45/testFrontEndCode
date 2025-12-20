@@ -20,14 +20,7 @@ function Hereisatestreview(props){
 
     const origMovName = props.origMovName;
     const movName = "Here is a test review";
-    const movVal = "1. I hope
-
-2. That there
-
-3. Will be
-
-Spaceshere
-butlikely there willnot.";
+    const movVal = "1. I hope\nThis is a\nNew review\n\nHello";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
@@ -90,6 +83,7 @@ butlikely there willnot.";
 
     return(
         <div>
+            {varVar && <h1>{movName}</h1>}
             {varVar && <pre>{movVal}</pre>}
             {!varVar &&<form onSubmit={handleSubmit}>
                 <label className="linkss">

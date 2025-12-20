@@ -7,7 +7,6 @@ import {Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
 import {useEffect} from 'react';
 import {useMemo} from 'react';
-//import {useState} from 'react-router-dom';
 
 function Home(props){
 
@@ -15,7 +14,6 @@ function Home(props){
   let setTFVar = props.age;
   let origMovName = props.origMovName;
   let setPrevPath = props.setPrevPath;
-  let setReinit = props.setReinit;
   const setLinks = props.linksStuff;
 
   const handleClick = () => {
@@ -31,7 +29,7 @@ function Home(props){
       { id: 6, text: 'Here is a test review', to: '/Hereisatestreview' },
     ];
   }, []); // <-- Empty array ensures it's created only once
-  const stvar = "hello";
+  //const stvar = "hello";
   useEffect(() => {
     setLinks(linksData);
   },[linksData, setLinks]);

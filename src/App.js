@@ -27,12 +27,10 @@ function usePersistedState(key, defaultValue) {
 }
 
 function App(){
+
   const [ranVar, settfVar] = useState(true);
-
   const [prevPath, setPrevPath] = usePersistedState('pathname',window.location.pathname);
-
   const [links, setLinks] = usePersistedState('linkNames',[{id: "hello"},{id: "goodbye"}]);
-
   const [origMovName, setOrigMovName] = useState('');
 
   const userData = {name: ranVar, age: settfVar, prevPath: prevPath, setPrevPath: setPrevPath};
@@ -49,11 +47,9 @@ function App(){
   const handlePageLoad = () => {
     if (window.location.pathname === "/" || window.location.pathname === "/*"){
       settfVar(true);
-      //setPrevPath(window.location.pathname);
     }
     else{
       settfVar(false);
-      //setPrevPath(window.location.pathname);
     }
   };
 
