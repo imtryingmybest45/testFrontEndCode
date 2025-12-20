@@ -1,6 +1,5 @@
 import TheAutopsyofJaneDoe from './TheAutopsyofJaneDoe';
 import TheAutopsyofJaneDoe2 from './TheAutopsyofJaneDoe2';
-import Conjuring2 from './Conjuring2';
 import Insidious from './Insidious';
 import TheConjuringChapter2 from './TheConjuringChapter2';
 import {Routes} from 'react-router-dom';
@@ -30,7 +29,6 @@ function Home(props){
     return [
       { id: 1, text: 'The Conjuring Chapter 2', to: '/TheConjuringChapter2' },
       { id: 2, text: 'Insidious', to: '/Insidious' },
-      { id: 5, text: 'Conjuring 2', to: '/Conjuring2' },
       { id: 6, text: 'The Autopsy of Jane Doe 2', to: '/TheAutopsyofJaneDoe2' },
       { id: 7, text: 'The Autopsy of Jane Doe', to: '/TheAutopsyofJaneDoe' },
     ];
@@ -48,7 +46,6 @@ function Home(props){
       <Routes>
         <Route path="/TheConjuringChapter2" element={<TheConjuringChapter2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/Insidious" element={<Insidious name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/Conjuring2" element={<Conjuring2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/TheAutopsyofJaneDoe2" element={<TheAutopsyofJaneDoe2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/TheAutopsyofJaneDoe" element={<TheAutopsyofJaneDoe name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
       </Routes>
