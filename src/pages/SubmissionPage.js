@@ -1,6 +1,20 @@
-import {useState,useLayoutEffect,useRef} from 'react';
+import {useState,useLayoutEffect,useRef,useEffect} from 'react';
 import axios from 'axios';
 import "../App.css"
+
+function usePersistedState(key, defaultValue) {
+  // Initialize state with value from localStorage if available
+  const [state, setState] = useState(() => {
+    const storedValue = sessionStorage.getItem(key);
+    return storedValue ? JSON.parse(storedValue) : defaultValue;
+  });
+
+  // Update localStorage whenever the state changes
+  useEffect(() => {
+    sessionStorage.setItem(key, JSON.stringify(state));
+  }, [key, state]);
+  return [state, setState];
+}
 
 function SubmissionPage(props){
     
@@ -17,7 +31,7 @@ function SubmissionPage(props){
     }, [value]); // Re-run when the value changes
 
     const [stvar, setMess] = useState('');
-    const [formData, setFormData] = useState({
+    const [formData, setFormData] = usePersistedState("submitMovInfo",{
         movieName: '',
         movieReview: '',
     })

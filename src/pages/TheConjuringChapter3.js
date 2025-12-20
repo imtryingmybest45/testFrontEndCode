@@ -62,8 +62,8 @@ function TheConjuringChapter3(props){
         }
         else{
         setMess("Please wait, your review is loading.");
-        //axios.post('https://tryingthisagain-e6f8d0gqfmgsevft.eastus2-01.azurewebsites.net/genericEndpoint123',formData)
-        axios.post('http://localhost:8080/editEndpoint',formData)
+        axios.post('https://tryingthisagain-e6f8d0gqfmgsevft.eastus2-01.azurewebsites.net/editEndpoint',formData)
+        //axios.post('http://localhost:8080/editEndpoint',formData)
         .then(response => setMess(response.data))
         }
     };
@@ -83,7 +83,8 @@ function TheConjuringChapter3(props){
 
     return(
         <div>
-            {varVar && <pre>{movVal}</pre>}
+            {varVar && <h1>{movName}</h1>}
+            {varVar && <pre className = "paragraphStylin">{movVal}</pre>}
             {!varVar &&<form onSubmit={handleSubmit}>
                 <label className="linkss">
                     Movie Name:

@@ -86,6 +86,11 @@
   gap: 10px;
 }
 
+.paragraphStylin {
+  font-size:medium;
+  font-family:'Times New Roman', Times, serif;
+}
+
 
 @keyframes App-logo-spin {
   from {

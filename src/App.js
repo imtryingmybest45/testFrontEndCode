@@ -37,11 +37,13 @@ function App(){
 
   const homeClick = () => {
     sessionStorage.removeItem('movInfo')
+    sessionStorage.removeItem('submitMovInfo')
     settfVar(true)
   }
 
   const adminClick = () => {
     sessionStorage.removeItem('movInfo')
+    sessionStorage.removeItem('submitMovInfo')
   }
 
   const handlePageLoad = () => {

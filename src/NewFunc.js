@@ -84,7 +84,7 @@ function NewFunc(props){
     return(
         <div>
             {varVar && <h1>{movName}</h1>}
-            {varVar && <pre>{movVal}</pre>}
+            {varVar && <pre className = "paragraphStylin">{movVal}</pre>}
             {!varVar &&<form onSubmit={handleSubmit}>
                 <label className="linkss">
                     Movie Name:
