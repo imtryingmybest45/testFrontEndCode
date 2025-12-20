@@ -25,7 +25,7 @@ function Home(props){
 
   const linksData = useMemo(() => {
     return [
-      { id: 1, text: 'The Conjuring', to: '/TheConjuring' },
+      { id: 1, text: 'The Conjuring Chapter 2', to: '/TheConjuringChapter2' },
       { id: 3, text: 'The Descent', to: '/TheDescent' },
       { id: 4, text: 'Conjuring', to: '/Conjuring' },
       { id: 5, text: 'Insidious Chapter 2', to: '/InsidiousChapter2' },
