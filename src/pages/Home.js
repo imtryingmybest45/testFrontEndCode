@@ -7,7 +7,7 @@ import TheDescent from './TheDescent';
 import TheDescent2 from './TheDescent2';
 import FunchytheSnowwoman3 from './FunchytheSnowwoman3';
 import FunchytheSnowwoman2 from './FunchytheSnowwoman2';
-import FunchytheSnowwoman from './FunchytheSnowwoman';
+import FunchytheSnowwomanSheIsMyMom from './FunchytheSnowwomanSheIsMyMom';
 import Insidious from './Insidious';
 import TheConjuringChapter2 from './TheConjuringChapter2';
 import {Routes} from 'react-router-dom';
@@ -35,7 +35,7 @@ function Home(props){
     return [
       { id: 1, text: 'The Conjuring Chapter 2', to: '/TheConjuringChapter2' },
       { id: 2, text: 'Insidious', to: '/Insidious' },
-      { id: 3, text: 'Funchy the Snowwoman', to: '/FunchytheSnowwoman' },
+      { id: 3, text: 'Funchy the Snowwoman She Is My Mom', to: '/FunchytheSnowwomanSheIsMyMom' },
       { id: 4, text: 'Funchy the Snowwoman 2', to: '/FunchytheSnowwoman2' },
       { id: 5, text: 'Funchy the Snowwoman 3', to: '/FunchytheSnowwoman3' },
       { id: 6, text: 'The Descent 2', to: '/TheDescent2' },
@@ -60,7 +60,7 @@ function Home(props){
       <Routes>
         <Route path="/TheConjuringChapter2" element={<TheConjuringChapter2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/Insidious" element={<Insidious name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/FunchytheSnowwoman" element={<FunchytheSnowwoman name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/FunchytheSnowwomanSheIsMyMom" element={<FunchytheSnowwomanSheIsMyMom name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/FunchytheSnowwoman2" element={<FunchytheSnowwoman2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/FunchytheSnowwoman3" element={<FunchytheSnowwoman3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/TheDescent2" element={<TheDescent2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
