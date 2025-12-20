@@ -1,7 +1,7 @@
 import InsidiousChapter from './InsidiousChapter';
 import Conjuring from './Conjuring';
 import TheDescent from './TheDescent';
-import TheConjuringChapter2 from './TheConjuringChapter2';
+import TheConjuringChapter3 from './TheConjuringChapter3';
 import {Routes} from 'react-router-dom';
 import {Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
@@ -25,7 +25,7 @@ function Home(props){
 
   const linksData = useMemo(() => {
     return [
-      { id: 1, text: 'The Conjuring Chapter 2', to: '/TheConjuringChapter2' },
+      { id: 1, text: 'The Conjuring Chapter 3', to: '/TheConjuringChapter3' },
       { id: 3, text: 'The Descent', to: '/TheDescent' },
       { id: 4, text: 'Conjuring', to: '/Conjuring' },
       { id: 5, text: 'Insidious Chapter', to: '/InsidiousChapter' },
@@ -42,7 +42,7 @@ function Home(props){
       {tfVar&&<p>This is where I review horror movies.</p>}
       {tfVar&&<p>Click on a movie name to see the review.</p>}
       <Routes>
-        <Route path="/TheConjuringChapter2" element={<TheConjuringChapter2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/TheConjuringChapter3" element={<TheConjuringChapter3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/TheDescent" element={<TheDescent name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/Conjuring" element={<Conjuring name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/InsidiousChapter" element={<InsidiousChapter name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
