@@ -16,10 +16,10 @@ function usePersistedState(key, defaultValue) {
   return [state, setState];
 }
 
-function TheConjuringChapter(props){
+function FUNCHYTHESNOWWOMAN(props){
 
     const origMovName = props.origMovName;
-    const movName = "The Conjuring Chapter";
+    const movName = "FUNCHY THE SNOWWOMAN";
     const movVal = "Rating: 10/10\n\nTdak: 123\n\n1. fkdsjalf\n2. fkdlsajf\n3. kjdsajf;d\n\nHere we go, this ia lot of writing and it is so much wrigning and ffffffffffffffffffffffffffffffffffffffffffffffffffffkajsfkdlsjafkl kafl;here wil eajfffffffffffffffffffffffffffff fkdsj fdksajkfjdskafdj;skafd";
 
     const [varVar, setVarVar] = useState(true);
@@ -101,4 +101,4 @@ function TheConjuringChapter(props){
     )
 }
 
-export default TheConjuringChapter;
+export default FUNCHYTHESNOWWOMAN;
