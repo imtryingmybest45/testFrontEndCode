@@ -16,41 +16,41 @@ function usePersistedState(key, defaultValue) {
   return [state, setState];
 }
 
-function TheConjuringChapter3(props){
+function TheConjuringChapter4(props){
 
     const origMovName = props.origMovName;
-    const movName = "The Conjuring Chapter 3";
-    const movVal = "This is the review for the Conjuring Chapter 3.";
+    const movName = "The Conjuring Chapter 4";
+    const movVal = "This is the review for the Conjuring Chapter 4.";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
 
     const value = '';
-        const inputRef = useRef(null);
-        const inputRef2 = useRef(null);
-        const specialCharsRegex = /[^a-zA-Z0-9\s]/;
-    
-        useLayoutEffect(() => {
-            if (inputRef.current) {
-                inputRef.current.style.height = 'auto'; // Reset width to calculate actual content width
-                inputRef.current.style.height = inputRef.current.scrollHeight + 'px';
-            }
-        }, [value]); // Re-run when the value changes
-    
-        const [stvar, setMess] = useState('');
-        const [formData, setFormData] = usePersistedState("movInfo",{
-            movieName: movName,
-            movieReview: movVal,
-            origMovName: origMovName,
-        });
-    
-        const handleChange = (e) => {
-            const { name, value } = e.target;
-            setFormData((prevFormData) => ({
-                    ...prevFormData,
-                    [name]: value,
-                }));
-        };
+    const inputRef = useRef(null);
+    const inputRef2 = useRef(null);
+    const specialCharsRegex = /[^a-zA-Z0-9\s]/;
+
+    useLayoutEffect(() => {
+        if (inputRef.current) {
+            inputRef.current.style.height = 'auto'; // Reset width to calculate actual content width
+            inputRef.current.style.height = inputRef.current.scrollHeight + 'px';
+        }
+    }, [value]); // Re-run when the value changes
+
+    const [stvar, setMess] = useState('');
+    const [formData, setFormData] = usePersistedState("movInfo",{
+        movieName: movName,
+        movieReview: movVal,
+        origMovName: origMovName,
+    });
+
+    const handleChange = (e) => {
+        const { name, value } = e.target;
+        setFormData((prevFormData) => ({
+                ...prevFormData,
+                [name]: value,
+            }));
+    };
 
     const handleSubmit = (e) => {
         e.preventDefault(); // Prevents default form submission behavior (page reload)
@@ -101,4 +101,4 @@ function TheConjuringChapter3(props){
     )
 }
 
-export default TheConjuringChapter3;
+export default TheConjuringChapter4;
