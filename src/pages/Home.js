@@ -1,3 +1,4 @@
+import IKnowWhatudid from './IKnowWhatudid';
 import IKnowWhatudid3 from './IKnowWhatudid3';
 import FunchyThesnowWoman from './FunchyThesnowWoman';
 import FunchyThesnowWoman3 from './FunchyThesnowWoman3';
@@ -27,6 +28,7 @@ function Home(props){
       { id: 4, text: 'Funchy The snowWoman 3', to: '/FunchyThesnowWoman3' },
       { id: 5, text: 'Funchy The snowWoman', to: '/FunchyThesnowWoman' },
       { id: 6, text: 'I Know What u did 3', to: '/IKnowWhatudid3' },
+      { id: 7, text: 'I Know What u did', to: '/IKnowWhatudid' },
     ];
   }, []); // <-- Empty array ensures it's created only once
   //const stvar = "hello";
@@ -44,6 +46,7 @@ function Home(props){
         <Route path="/FunchyThesnowWoman3" element={<FunchyThesnowWoman3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/FunchyThesnowWoman" element={<FunchyThesnowWoman name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/IKnowWhatudid3" element={<IKnowWhatudid3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/IKnowWhatudid" element={<IKnowWhatudid name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
       </Routes>
       <nav>
         <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>
