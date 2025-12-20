@@ -33,8 +33,8 @@ function Home(props){
       { id: 2, text: 'Insidious', to: '/Insidious' },
       { id: 3, text: 'The Conjuring 3', to: '/TheConjuring3' },
       { id: 4, text: 'The Conjuring', to: '/TheConjuring' },
-      { id: 5, text: 'The Conjuring 4', to: '/TheConjuring' },
-      { id: 6, text: 'I Know What you Did Last Summer', to: '/TheConjuring' },
+      { id: 5, text: 'The Conjuring 4', to: '/TheConjuring4' },
+      { id: 6, text: 'I Know What you Did Last Summer', to: '/IKnowWhatyouDidLastSummer' },
     ];
   }, []); // <-- Empty array ensures it's created only once
   const stvar = "hello";
