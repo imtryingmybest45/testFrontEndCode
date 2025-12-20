@@ -5,7 +5,7 @@ import IamaddingANewreview from './IamaddingANewreview';
 import ThisMovieNameiscompletelydifferentnow from './ThisMovieNameiscompletelydifferentnow';
 import TheAutopsyofjanedoe3 from './TheAutopsyofjanedoe3';
 import TheAutopsyofjanedoe from './TheAutopsyofjanedoe';
-import TheAutopsyofjanedoe2 from './TheAutopsyofjanedoe2';
+import TheAutopsyofjanedoe2Hereitis from './TheAutopsyofjanedoe2Hereitis';
 import TheDescent3 from './TheDescent3';
 import TheDescent from './TheDescent';
 import TheDescent2 from './TheDescent2';
@@ -45,7 +45,7 @@ function Home(props){
       { id: 6, text: 'The Descent 2', to: '/TheDescent2' },
       { id: 7, text: 'The Descent', to: '/TheDescent' },
       { id: 8, text: 'The Descent 3', to: '/TheDescent3' },
-      { id: 9, text: 'The Autopsy of jane doe 2', to: '/TheAutopsyofjanedoe2' },
+      { id: 9, text: 'The Autopsy of jane doe 2 Here it is', to: '/TheAutopsyofjanedoe2Hereitis' },
       { id: 10, text: 'The Autopsy of jane doe', to: '/TheAutopsyofjanedoe' },
       { id: 11, text: 'The Autopsy of jane doe 3', to: '/TheAutopsyofjanedoe3' },
       { id: 12, text: 'This Movie Name is completely different now', to: '/ThisMovieNameiscompletelydifferentnow' },
@@ -74,7 +74,7 @@ function Home(props){
         <Route path="/TheDescent2" element={<TheDescent2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/TheDescent" element={<TheDescent name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/TheDescent3" element={<TheDescent3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/TheAutopsyofjanedoe2" element={<TheAutopsyofjanedoe2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/TheAutopsyofjanedoe2Hereitis" element={<TheAutopsyofjanedoe2Hereitis name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/TheAutopsyofjanedoe" element={<TheAutopsyofjanedoe name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/TheAutopsyofjanedoe3" element={<TheAutopsyofjanedoe3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/ThisMovieNameiscompletelydifferentnow" element={<ThisMovieNameiscompletelydifferentnow name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
