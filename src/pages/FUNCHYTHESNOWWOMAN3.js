@@ -16,11 +16,11 @@ function usePersistedState(key, defaultValue) {
   return [state, setState];
 }
 
-function FUNCHYTHESNOWWOMAN(props){
+function FUNCHYTHESNOWWOMAN3(props){
 
     const origMovName = props.origMovName;
-    const movName = "FUNCHY THE SNOWWOMAN";
-    const movVal = "Rating: 10/10\n\nTdak: 123\n\n1. fkdsjalf\n2. fkdlsajf\n3. kjdsajf;d\n\nHere we go, this ia lot of writing and it is so much wrigning and ffffffffffffffffffffffffffffffffffffffffffffffffffffkajsfkdlsjafkl kafl;here wil eajfffffffffffffffffffffffffffff fkdsj fdksajkfjdskafdj;skafd";
+    const movName = "FUNCHY THE SNOWWOMAN 3";
+    const movVal = "Rating: 10/10\n\ni am here";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
@@ -101,4 +101,4 @@ function FUNCHYTHESNOWWOMAN(props){
     )
 }
 
-export default FUNCHYTHESNOWWOMAN;
+export default FUNCHYTHESNOWWOMAN3;
