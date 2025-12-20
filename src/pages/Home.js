@@ -14,9 +14,7 @@ function Home(props){
   let tfVar = props.name;
   let setTFVar = props.age;
   let origMovName = props.origMovName;
-  //let prevPath = props.prevPath;
   let setPrevPath = props.setPrevPath;
-  //let setReinit = props.setReinit;
   let setReinit = props.setReinit;
   const setLinks = props.linksStuff;
 
