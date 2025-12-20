@@ -1,5 +1,5 @@
 import Conjuring from './Conjuring';
-import TheDescent2 from './TheDescent2';
+import TheDescent from './TheDescent';
 import Insidious from './Insidious';
 import TheConjuringChapter2 from './TheConjuringChapter2';
 import {Routes} from 'react-router-dom';
@@ -27,7 +27,7 @@ function Home(props){
     return [
       { id: 1, text: 'The Conjuring', to: '/TheConjuring' },
       { id: 2, text: 'Insidious', to: '/Insidious' },
-      { id: 3, text: 'The Descent 2', to: '/TheDescent2' },
+      { id: 3, text: 'The Descent', to: '/TheDescent' },
       { id: 4, text: 'Conjuring', to: '/Conjuring' },
     ];
   }, []); // <-- Empty array ensures it's created only once
@@ -44,7 +44,7 @@ function Home(props){
       <Routes>
         <Route path="/TheConjuringChapter2" element={<TheConjuringChapter2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/Insidious" element={<Insidious name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/TheDescent2" element={<TheDescent2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/TheDescent" element={<TheDescent name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/Conjuring" element={<Conjuring name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
       </Routes>
       <nav>
