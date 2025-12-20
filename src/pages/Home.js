@@ -1,4 +1,5 @@
 import HereWeGo from './HereWeGo';
+import Insidious from './Insidious';
 import TheConjuringChapter2 from './TheConjuringChapter2';
 import {Routes} from 'react-router-dom';
 import {Route} from 'react-router-dom';
