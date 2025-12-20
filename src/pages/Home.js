@@ -1,4 +1,3 @@
-import FunchytheSnowwomanSheIsMyMom from './FunchytheSnowwomanSheIsMyMom';
 import AsAboveSoBelow from './AsAboveSoBelow';
 import TheAutopsyofjanedoe3 from './TheAutopsyofjanedoe3';
 import TheAutopsyofjanedoe from './TheAutopsyofjanedoe';
@@ -36,7 +35,7 @@ function Home(props){
     return [
       { id: 1, text: 'The Conjuring Chapter 2', to: '/TheConjuringChapter2' },
       { id: 2, text: 'Insidious', to: '/Insidious' },
-      { id: 3, text: 'Funchy the Snowwoman She Is My Mom', to: '/FunchytheSnowwomanSheIsMyMom' },
+      { id: 3, text: 'Funchy the Snowwoman', to: '/FunchytheSnowwoman' },
       { id: 4, text: 'Funchy the Snowwoman 2', to: '/FunchytheSnowwoman2' },
       { id: 5, text: 'Funchy the Snowwoman 3', to: '/FunchytheSnowwoman3' },
       { id: 6, text: 'The Descent 2', to: '/TheDescent2' },
@@ -61,7 +60,7 @@ function Home(props){
       <Routes>
         <Route path="/TheConjuringChapter2" element={<TheConjuringChapter2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/Insidious" element={<Insidious name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/FunchytheSnowwomanSheIsMyMom" element={<FunchytheSnowwomanSheIsMyMom name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/FunchytheSnowwoman" element={<FunchytheSnowwoman name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/FunchytheSnowwoman2" element={<FunchytheSnowwoman2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/FunchytheSnowwoman3" element={<FunchytheSnowwoman3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/TheDescent2" element={<TheDescent2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
