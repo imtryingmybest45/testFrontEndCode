@@ -1,15 +1,5 @@
-import Conjuring6 from './Conjuring6';
-import Conjuring from './Conjuring';
-import Conjuring5 from './Conjuring5';
-import Conjuring2 from './Conjuring2';
 import Autopsy from './Autopsy';
 import Autopsy2 from './Autopsy2';
-import Weapons from './Weapons';
-import Weapons2HereWeGoAgain from './Weapons2HereWeGoAgain';
-import IKnowWhatyouDidLastSummer from './IKnowWhatyouDidLastSummer';
-import TheConjuringChapter4 from './TheConjuringChapter4';
-import TheConjuring from './TheConjuring';
-import TheConjuringChapter3Again from './TheConjuringChapter3Again';
 import Insidious from './Insidious';
 import TheConjuringChapter2 from './TheConjuringChapter2';
 import {Routes} from 'react-router-dom';
@@ -39,18 +29,8 @@ function Home(props){
     return [
       { id: 1, text: 'The Conjuring Chapter 2', to: '/TheConjuringChapter2' },
       { id: 2, text: 'Insidious', to: '/Insidious' },
-      { id: 3, text: 'The Conjuring Chapter 3 Again', to: '/TheConjuringChapter3Again' },
-      { id: 4, text: 'The Conjuring', to: '/TheConjuring' },
-      { id: 5, text: 'The Conjuring Chapter 4', to: '/TheConjuringChapter4' },
-      { id: 6, text: 'I Know What you Did Last Summer', to: '/IKnowWhatyouDidLastSummer' },
-      { id: 7, text: 'Weapons 2 Here We Go Again', to: '/Weapons2' },
-      { id: 8, text: 'Weapons', to: '/Weapons' },
       { id: 9, text: 'Autopsy 2', to: '/Autopsy2' },
       { id: 10, text: 'Autopsy', to: '/Autopsy' },
-      { id: 11, text: 'Conjuring 2', to: '/Conjuring2' },
-      { id: 12, text: 'Conjuring 5', to: '/Conjuring5' },
-      { id: 13, text: 'Conjuring', to: '/Conjuring' },
-      { id: 14, text: 'Conjuring 6', to: '/Conjuring6' },
     ];
   }, []); // <-- Empty array ensures it's created only once
   const stvar = "hello";
@@ -66,18 +46,8 @@ function Home(props){
       <Routes>
         <Route path="/TheConjuringChapter2" element={<TheConjuringChapter2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/Insidious" element={<Insidious name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/TheConjuringChapter3Again" element={<TheConjuringChapter3Again name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/TheConjuring" element={<TheConjuring name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/TheConjuringChapter4" element={<TheConjuringChapter4 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/IKnowWhatyouDidLastSummer" element={<IKnowWhatyouDidLastSummer name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/Weapons2HereWeGoAgain" element={<Weapons2HereWeGoAgain name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/Weapons" element={<Weapons name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/Autopsy2" element={<Autopsy2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/Autopsy" element={<Autopsy name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/Conjuring2" element={<Conjuring2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/Conjuring5" element={<Conjuring5 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/Conjuring" element={<Conjuring name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/Conjuring6" element={<Conjuring6 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
       </Routes>
       <nav>
         <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>
