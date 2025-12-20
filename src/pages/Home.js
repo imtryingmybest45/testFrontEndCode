@@ -1,3 +1,4 @@
+import FunchyThesnowWoman3 from './FunchyThesnowWoman3';
 import FunchyThesnowWoman from './FunchyThesnowWoman';
 import FunchyThesnowWoman2 from './FunchyThesnowWoman2';
 import {Routes} from 'react-router-dom';
@@ -23,6 +24,7 @@ function Home(props){
     return [
       { id: 2, text: 'Funchy The snowWoman 2', to: '/FunchyThesnowWoman2' },
       { id: 3, text: 'Funchy The snowWoman', to: '/FunchyThesnowWoman' },
+      { id: 4, text: 'Funchy The snowWoman 3', to: '/FunchyThesnowWoman3' },
     ];
   }, []); // <-- Empty array ensures it's created only once
   //const stvar = "hello";
@@ -38,6 +40,7 @@ function Home(props){
       <Routes>
         <Route path="/FunchyThesnowWoman2" element={<FunchyThesnowWoman2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/FunchyThesnowWoman" element={<FunchyThesnowWoman name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/FunchyThesnowWoman3" element={<FunchyThesnowWoman3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
       </Routes>
       <nav>
         <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>
