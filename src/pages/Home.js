@@ -23,6 +23,7 @@ function Home(props){
     return [
       { id: 1, text: 'The Conjuring Chapter 4', to: '/TheConjuringChapter4' },
       { id: 3, text: 'The Conjuring Chapter 2', to: '/TheConjuringChapter2' },
+      { id: 4, text: 'The Conjuring Chapter 2', to: '/TheConjuringChapter2' },
     ];
   }, []); // <-- Empty array ensures it's created only once
   //const stvar = "hello";
@@ -37,6 +38,7 @@ function Home(props){
       {tfVar&&<p>Click on a movie name to see the review.</p>}
       <Routes>
         <Route path="/TheConjuringChapter4" element={<TheConjuringChapter4 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/TheConjuringChapter2" element={<TheConjuringChapter2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/TheConjuringChapter2" element={<TheConjuringChapter2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
       </Routes>
       <nav>
