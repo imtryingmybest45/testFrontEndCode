@@ -1,3 +1,4 @@
+import AsAboveSoBelow from './AsAboveSoBelow';
 import TheAutopsyofjanedoe3 from './TheAutopsyofjanedoe3';
 import TheAutopsyofjanedoe from './TheAutopsyofjanedoe';
 import TheAutopsyofjanedoe2 from './TheAutopsyofjanedoe2';
@@ -43,6 +44,7 @@ function Home(props){
       { id: 9, text: 'The Autopsy of jane doe 2', to: '/TheAutopsyofjanedoe2' },
       { id: 10, text: 'The Autopsy of jane doe', to: '/TheAutopsyofjanedoe' },
       { id: 11, text: 'The Autopsy of jane doe 3', to: '/TheAutopsyofjanedoe3' },
+      { id: 12, text: 'As Above So Below', to: '/AsAboveSoBelow' },
     ];
   }, []); // <-- Empty array ensures it's created only once
   const stvar = "hello";
@@ -67,6 +69,7 @@ function Home(props){
         <Route path="/TheAutopsyofjanedoe2" element={<TheAutopsyofjanedoe2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/TheAutopsyofjanedoe" element={<TheAutopsyofjanedoe name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/TheAutopsyofjanedoe3" element={<TheAutopsyofjanedoe3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/AsAboveSoBelow" element={<AsAboveSoBelow name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
       </Routes>
       <nav>
         <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>
