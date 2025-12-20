@@ -9,7 +9,7 @@ import Weapons2 from './Weapons2';
 import IKnowWhatyouDidLastSummer from './IKnowWhatyouDidLastSummer';
 import TheConjuringChapter4 from './TheConjuringChapter4';
 import TheConjuring from './TheConjuring';
-import TheConjuring3 from './TheConjuring3';
+import TheConjuringChapter3Again from './TheConjuringChapter3Again';
 import Insidious from './Insidious';
 import TheConjuringChapter2 from './TheConjuringChapter2';
 import {Routes} from 'react-router-dom';
@@ -39,7 +39,7 @@ function Home(props){
     return [
       { id: 1, text: 'The Conjuring Chapter 2', to: '/TheConjuringChapter2' },
       { id: 2, text: 'Insidious', to: '/Insidious' },
-      { id: 3, text: 'The Conjuring 3', to: '/TheConjuring3' },
+      { id: 3, text: 'The Conjuring Chapter 3 Again', to: '/TheConjuringChapter3Again' },
       { id: 4, text: 'The Conjuring', to: '/TheConjuring' },
       { id: 5, text: 'The Conjuring Chapter 4', to: '/TheConjuringChapter4' },
       { id: 6, text: 'I Know What you Did Last Summer', to: '/IKnowWhatyouDidLastSummer' },
@@ -66,7 +66,7 @@ function Home(props){
       <Routes>
         <Route path="/TheConjuringChapter2" element={<TheConjuringChapter2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/Insidious" element={<Insidious name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/TheConjuring3" element={<TheConjuring3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/TheConjuringChapter3Again" element={<TheConjuringChapter3Again name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/TheConjuring" element={<TheConjuring name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/TheConjuringChapter4" element={<TheConjuringChapter4 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/IKnowWhatyouDidLastSummer" element={<IKnowWhatyouDidLastSummer name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
