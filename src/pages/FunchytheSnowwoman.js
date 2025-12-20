@@ -20,18 +20,7 @@ function FunchytheSnowwoman(props){
 
     const origMovName = props.origMovName;
     const movName = "Funchy the Snowwoman";
-    const movVal = "She is my sister
-And I am her momm!!
-
-Yes, she is my mom!!!
-
-And I'm upposed to go to the forrest
-1. What?
-
-2. You're a purple bear princess?
-3. I'm a purple bear pincesss!
-
-Wow, you cna talk.";
+    const movVal = "She is my sister";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
