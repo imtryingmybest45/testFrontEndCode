@@ -1,3 +1,4 @@
+import AndImupposedtoa from './AndImupposedtoa';
 import IamaddingANewreview from './IamaddingANewreview';
 import ThisMovieNameiscompletelydifferentnow from './ThisMovieNameiscompletelydifferentnow';
 import TheAutopsyofjanedoe3 from './TheAutopsyofjanedoe3';
@@ -47,6 +48,7 @@ function Home(props){
       { id: 11, text: 'The Autopsy of jane doe 3', to: '/TheAutopsyofjanedoe3' },
       { id: 12, text: 'This Movie Name is completely different now', to: '/ThisMovieNameiscompletelydifferentnow' },
       { id: 13, text: 'I am adding A New review', to: '/IamaddingANewreview' },
+      { id: 14, text: 'And Im upposed to a', to: '/AndImupposedtoa' },
     ];
   }, []); // <-- Empty array ensures it's created only once
   const stvar = "hello";
@@ -73,6 +75,7 @@ function Home(props){
         <Route path="/TheAutopsyofjanedoe3" element={<TheAutopsyofjanedoe3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/ThisMovieNameiscompletelydifferentnow" element={<ThisMovieNameiscompletelydifferentnow name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/IamaddingANewreview" element={<IamaddingANewreview name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/AndImupposedtoa" element={<AndImupposedtoa name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
       </Routes>
       <nav>
         <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>
