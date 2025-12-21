@@ -89,6 +89,8 @@
 .paragraphStylin {
   font-size:medium;
   font-family:'Times New Roman', Times, serif;
+  white-space: pre-wrap;
+  word-wrap: break-word;
 }
 
 
