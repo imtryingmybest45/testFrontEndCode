@@ -5,7 +5,6 @@ import IKnowWhatudid from './IKnowWhatudid';
 import IKnowWhatudid3 from './IKnowWhatudid3';
 import FunchyThesnowWoman from './FunchyThesnowWoman';
 import FunchyThesnowWoman3 from './FunchyThesnowWoman3';
-import FunchyThesnowWoman2 from './FunchyThesnowWoman2';
 import {Routes} from 'react-router-dom';
 import {Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
@@ -27,7 +26,6 @@ function Home(props){
 
   const linksData = useMemo(() => {
     return [
-      { id: 2, text: 'Funchy The snowWoman 2', to: '/FunchyThesnowWoman2' },
       { id: 4, text: 'Funchy The snowWoman 3', to: '/FunchyThesnowWoman3' },
       { id: 5, text: 'Funchy The snowWoman', to: '/FunchyThesnowWoman' },
       { id: 6, text: 'I Know What u did 3', to: '/IKnowWhatudid3' },
@@ -48,7 +46,6 @@ function Home(props){
       {tfVar&&<p>This is where I review horror movies.</p>}
       {tfVar&&<p>Click on a movie name to see the review.</p>}
       <Routes>
-        <Route path="/FunchyThesnowWoman2" element={<FunchyThesnowWoman2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/FunchyThesnowWoman3" element={<FunchyThesnowWoman3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/FunchyThesnowWoman" element={<FunchyThesnowWoman name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/IKnowWhatudid3" element={<IKnowWhatudid3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
