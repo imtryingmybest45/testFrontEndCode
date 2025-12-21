@@ -20,7 +20,7 @@ function NewFunc(props){
 
     const origMovName = props.origMovName;
     const movName = "Insert movie name here";
-    const movVal = 'Insert movie review here';
+    const movVal = "Insert movie review here";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
