@@ -4,6 +4,7 @@ import EditPage from './pages/EditPage';
 import SubmissionPage from './pages/SubmissionPage';
 import OptionsPage from './pages/OptionsPage';
 import DeletePage from './pages/DeletePage';
+import Accolades from './pages/AccoladesPage';
 import {Routes} from 'react-router-dom';
 import {Route} from 'react-router-dom';
 import {Link} from 'react-router-dom';
@@ -64,10 +65,12 @@ function App(){
       <nav className="top-left-div">
         <Link to='*' onClick={homeClick}>Home</Link>
         <Link to='/Admin' onClick={adminClick}>Admin</Link>
+        <Link to='/Accolades' onClick={adminClick}>Accolades</Link>
       </nav>
       <Routes>
         <Route path="*" element={<Home {...userData} linksStuff={setLinks} origMovName={origMovName}/>} />
         <Route path ="/Admin" element={<Admin />}/>
+        <Route path ="/Accolades" element={<Accolades />}/>
         <Route path ="/SubmissionPage" element={<SubmissionPage />}/>
         <Route path ="/DeletePage" element={<DeletePage linksData={links}/>}/>
         <Route path ="/EditPage" element={<EditPage {...userData} linksData={links} setOrigMovName={setOrigMovName}/>}/>

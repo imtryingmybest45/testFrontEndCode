@@ -6,7 +6,6 @@ function EditPage(props){
     let setPrevPath = props.setPrevPath;
     let {linksData} = props;
     let setOrigMovName = props.setOrigMovName;
-    const setPathName = props.setPathName;
 
     const handleClick=(origMovName)=>{
         setOrigMovName(origMovName);
