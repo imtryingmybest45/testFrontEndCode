@@ -62,7 +62,8 @@ function Insidious(props){
         }
         else{
         setMess("Please wait, your review is loading.");
-        axios.post('https://tryingthisagain-e6f8d0gqfmgsevft.eastus2-01.azurewebsites.net/editEndpoint',formData)
+        //axios.post('https://tryingthisagain-e6f8d0gqfmgsevft.eastus2-01.azurewebsites.net/editEndpoint',formData)
+        axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
         //axios.post('http://localhost:8080/editEndpoint',formData)
         .then(response => setMess(response.data))
         }
