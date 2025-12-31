@@ -28,7 +28,6 @@ function AnnabelleCreation(props){
     const value = '';
     const inputRef = useRef(null);
     const inputRef2 = useRef(null);
-    const specialCharsRegex = /[^a-zA-Z0-9\s]/;
 
     useLayoutEffect(() => {
         if (inputRef.current) {
