@@ -46,10 +46,7 @@ function SubmissionPage(props){
 
     const handleSubmit = (e) => {
         e.preventDefault(); // Prevents default form submission behavior (page reload)
-        if (specialCharsRegex.test(formData.movieName)){
-            setMess("Movie name cannot contain non-alphanumeric characters.")
-        }
-        else if(/^[a-z]/.test(formData.movieName)){
+        if(/^[a-z]/.test(formData.movieName)){
             setMess("First word of movie name must be uppercase.")
         }
         else{
