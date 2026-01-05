@@ -35,7 +35,6 @@ function Home(props){
       { id: 7, text: 'As Above, So Below 2', to: '/AsAboveSoBelow2', name: "As Above, So Below 2" },
       { id: 8, text: 'Annabelle: Creation', to: '/AnnabelleCreation', name: "Annabelle: Creation" },
       { id: 9, text: 'Insidious Chapter 4', to: '/InsidiousChapter4', name: "Insidious Chapter 4" },
-      { id: 10, text: 'Annabelle Creation', to: '/InsidiousChapter4', name: "Annabelle Creation" },
     ];
   const linksDataSorted = [...linksDataUnsorted].sort((a, b) => {
       return a.name.localeCompare(b.name);
