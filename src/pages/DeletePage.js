@@ -17,6 +17,7 @@ function DeletePage(props){
     const yesClick = () => {
         setTFButton(false);
         setMess("Please wait, your request is pending.");
+        console.log(movieName);
         axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/deleteEndpoint',movieName)
         //axios.post('http://localhost:8080/deleteEndpoint',movieName)
         .then(response => setMess(response.data))
