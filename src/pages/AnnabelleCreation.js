@@ -19,7 +19,7 @@ function usePersistedState(key, defaultValue) {
 function AnnabelleCreation(props){
 
     const origMovName = props.origMovName;
-    const movName = "Annabelle Creation";
+    const movName = "Annabelle: Creation";
     const movVal = "This is the review for Annabelle Creation. I hope this works. Hello. 67";
 
     const [varVar, setVarVar] = useState(true);
@@ -58,8 +58,8 @@ function AnnabelleCreation(props){
         }
         else{
         setMess("Please wait, your review is loading.");
-        axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
-        //axios.post('http://localhost:8080/editEndpoint',formData)
+        //axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
+        axios.post('http://localhost:8080/editEndpoint',formData)
         .then(response => setMess(response.data))
         }
     };
