@@ -19,8 +19,8 @@ function usePersistedState(key, defaultValue) {
 function AnnabelleCreation(props){
 
     const origMovName = props.origMovName;
-    const movName = "Annabelle: Creation";
-    const movVal = "This is the review for Annabelle Creation. I hope this works.";
+    const movName = "Annabelle Creation";
+    const movVal = "This is the review for Annabelle Creation. I hope this works. 67...";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
