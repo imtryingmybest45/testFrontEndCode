@@ -19,7 +19,7 @@ function usePersistedState(key, defaultValue) {
 function AsAboveSoBelow2(props){
 
     const origMovName = props.origMovName;
-    const movName = "As Above So Below 2";
+    const movName = "As Above, So Below 2";
     const movVal = "This is the movie review for As above, so below. here we go";
 
     const [varVar, setVarVar] = useState(true);
