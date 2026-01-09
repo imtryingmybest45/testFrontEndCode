@@ -16,10 +16,10 @@ function usePersistedState(key, defaultValue) {
   return [state, setState];
 }
 
-function AsAboveSoBelow2(props){
+function AsAboveSoBelow(props){
 
     const origMovName = props.origMovName;
-    const movName = "As Above So Below 2";
+    const movName = "As Above So Below";
     const movVal = "This is the movie review for As above, so below. here we go";
 
     const [varVar, setVarVar] = useState(true);
@@ -58,8 +58,8 @@ function AsAboveSoBelow2(props){
         }
         else{
         setMess("Please wait, your review is loading.");
-        axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
-        //axios.post('http://localhost:8080/editEndpoint',formData)
+        //axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
+        axios.post('http://localhost:8080/editEndpoint',formData)
         .then(response => setMess(response.data))
         }
     };
