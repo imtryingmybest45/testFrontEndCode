@@ -35,7 +35,7 @@ function Home(props){
       { id: 5, text: 'Insidious Chapter 3', to: '/InsidiousChapter3', name: "Insidious Chapter 3" },
       { id: 6, text: 'Terrifier 3', to: '/Terrifier3', name: "Terrifier 3" },
       { id: 7, text: 'Annabelle: Creation', to: '/AnnabelleCreation', name: "Annabelle Creation" },
-      { id: 8, text: 'As Above, So Below', to: '/AsAboveSoBelow', name: "As Above, So Below" },
+      { id: 8, text: 'As Above, So Below', to: '/AsAboveSoBelow', name: "As Above So Below" },
       { id: 9, text: 'Insidious Chapter 10', to: '/InsidiousChapter10', name: "Insidious Chapter 10" },
       { id: 10, text: "Insidious", to: "/Insidious", name: "Insidious" },
       { id: 11, text: "I've Been Alone", to: "/IveBeenAlone", name: "I've Been Alone" },
