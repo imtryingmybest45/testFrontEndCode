@@ -16,10 +16,10 @@ function usePersistedState(key, defaultValue) {
   return [state, setState];
 }
 
-function InsidiousChapter4(props){
+function InsidiousChapter10(props){
 
     const origMovName = props.origMovName;
-    const movName = "Insidious Chapter 4";
+    const movName = "Insidious Chapter 10";
     const movVal = "This is the review for Insidious Chapter 4. Huzzah.";
 
     const [varVar, setVarVar] = useState(true);
@@ -58,8 +58,8 @@ function InsidiousChapter4(props){
         }
         else{
         setMess("Please wait, your review is loading.");
-        //axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
-        axios.post('http://localhost:8080/editEndpoint',formData)
+        axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
+        //axios.post('http://localhost:8080/editEndpoint',formData)
         .then(response => setMess(response.data))
         }
     };
@@ -98,4 +98,4 @@ function InsidiousChapter4(props){
     )
 }
 
-export default InsidiousChapter4;
+export default InsidiousChapter10;
