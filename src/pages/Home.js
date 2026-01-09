@@ -1,4 +1,5 @@
 import Insidious from './Insidious';
+import Insidious from './Insidious';
 import InsidiousChapter4 from './InsidiousChapter4';
 import AnnabelleCreation from './AnnabelleCreation';
 import AsAboveSoBelow from './AsAboveSoBelow';
@@ -37,6 +38,7 @@ function Home(props){
       { id: 8, text: 'Annabelle Creation', to: '/AnnabelleCreation', name: "Annabelle Creation" },
       { id: 9, text: 'Insidious Chapter 4', to: '/InsidiousChapter4', name: "Insidious Chapter 4" },
       { id: 10, text: 'Insidious', to: '/InsidiousChapter4', name: "Insidious" },
+      { id: 11, text: 'Insidious', to: '/InsidiousChapter4', name: "Insidious" },
     ];
   const linksDataSorted = [...linksDataUnsorted].sort((a, b) => {
       return a.name.localeCompare(b.name);
@@ -64,6 +66,7 @@ function Home(props){
         <Route path="/InsidiousChapter4" element={<InsidiousChapter4 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/AnnabelleCreation" element={<AnnabelleCreation name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/AsAboveSoBelow" element={<AsAboveSoBelow name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/Insidious" element={<Insidious name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/Insidious" element={<Insidious name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
       </Routes>
       <nav>
