@@ -19,8 +19,8 @@ function usePersistedState(key, defaultValue) {
 function IKnowWhatYouDidLastSummer(props){
 
     const origMovName = props.origMovName;
-    const movName = "I Know What You Did Last Summer…";
-    const movVal = "Uh oh";
+    const movName = "I Know What You Did Last Summer";
+    const movVal = "RUh oh";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
