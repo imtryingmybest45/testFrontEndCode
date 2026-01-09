@@ -19,7 +19,7 @@ function usePersistedState(key, defaultValue) {
 function AsAboveSoBelow(props){
 
     const origMovName = props.origMovName;
-    const movName = "As Above So Below";
+    const movName = "As Above, So Below";
     const movVal = "This is the movie review for As above, so below. here we go";
 
     const [varVar, setVarVar] = useState(true);
@@ -58,8 +58,8 @@ function AsAboveSoBelow(props){
         }
         else{
         setMess("Please wait, your review is loading.");
-        //axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
-        axios.post('http://localhost:8080/editEndpoint',formData)
+        axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
+        //axios.post('http://localhost:8080/editEndpoint',formData)
         .then(response => setMess(response.data))
         }
     };
@@ -80,7 +80,7 @@ function AsAboveSoBelow(props){
     return(
         <div>
             {varVar && <h1>{movName}</h1>}
-            {varVar && <img src={'error'} alt="This is the movie poster for this movie."/>}
+            {varVar && <img src={'https://m.media-amazon.com/images/M/MV5BMTQzNzg0NDI2MF5BMl5BanBnXkFtZTgwMzgxNzY2MTE@._V1_SX300.jpg'} alt="This is the movie poster for this movie."/>}
             {varVar && <pre className = "paragraphStylin">{movVal}</pre>}
             {!varVar &&<form onSubmit={handleSubmit}>
                 <label className="linkss">
