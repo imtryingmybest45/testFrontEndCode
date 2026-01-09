@@ -98,4 +98,4 @@ function AsAboveSoBelow(props){
     )
 }
 
-export default AsAboveSoBelow2;
+export default AsAboveSoBelow;
