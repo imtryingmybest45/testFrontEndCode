@@ -1,6 +1,6 @@
 import Insidious from './Insidious';
 import InsidiousChapter4 from './InsidiousChapter4';
-import AsAboveSoBelow from './AsAboveSoBelow';
+import AsAboveSoBelow2 from './AsAboveSoBelow2';
 import AnnabelleCreation from './AnnabelleCreation';
 import Terrifier3 from './Terrifier3';
 import InsidiousChapter3 from './InsidiousChapter3';
@@ -34,7 +34,7 @@ function Home(props){
       { id: 5, text: 'Insidious Chapter 3', to: '/InsidiousChapter3', name: "Insidious Chapter 3" },
       { id: 6, text: 'Terrifier 3', to: '/Terrifier3', name: "Terrifier 3" },
       { id: 7, text: 'Annabelle Creation', to: '/AnnabelleCreation', name: "Annabelle Creation" },
-      { id: 8, text: 'As Above, So Below', to: '/AsAboveSoBelow', name: "As Above, So Below" },
+      { id: 8, text: 'As Above, So Below 2', to: '/AsAboveSoBelow2', name: "As Above, So Below 2" },
       { id: 9, text: 'Insidious Chapter 4', to: '/InsidiousChapter4', name: "Insidious Chapter 4" },
       { id: 10, text: 'Insidious', to: '/Insidious', name: "Insidious" },
       { id: 11, text: 'Annabelle: Creation', to: '/AnnabelleCreation', name: "Annabelle: Creation" },
@@ -62,7 +62,7 @@ function Home(props){
         <Route path="/InsidiousChapter3" element={<InsidiousChapter3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/Terrifier3" element={<Terrifier3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/AnnabelleCreation" element={<AnnabelleCreation name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/AsAboveSoBelow" element={<AsAboveSoBelow name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/AsAboveSoBelow2" element={<AsAboveSoBelow2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/InsidiousChapter4" element={<InsidiousChapter4 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/Insidious" element={<Insidious name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/AnnabelleCreation" element={<AnnabelleCreation name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
