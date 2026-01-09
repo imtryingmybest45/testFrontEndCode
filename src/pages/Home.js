@@ -42,6 +42,7 @@ function Home(props){
       { id: 11, text: 'Insidious Chapter 2', to: '/InsidiousChapter2', name: "Insidious Chapter 2" },
       { id: 12, text: 'Insidious Chapter', to: '/InsidiousChapter', name: "Insidious Chapter" },
       { id: 13, text: 'Annabelle Creation', to: '/AnnabelleCreation', name: "Annabelle Creation" },
+      { id: 14, text: 'As Above So Below', to: '/AsAboveSoBelow', name: "As Above So Below" },
     ];
   const linksDataSorted = [...linksDataUnsorted].sort((a, b) => {
       return a.name.localeCompare(b.name);
@@ -72,6 +73,7 @@ function Home(props){
         <Route path="/InsidiousChapter2" element={<InsidiousChapter2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/InsidiousChapter" element={<InsidiousChapter name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/AnnabelleCreation" element={<AnnabelleCreation name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/AsAboveSoBelow" element={<AsAboveSoBelow name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
       </Routes>
       <nav>
         <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>
