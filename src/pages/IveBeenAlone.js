@@ -19,8 +19,8 @@ function usePersistedState(key, defaultValue) {
 function IveBeenAlone(props){
 
     const origMovName = props.origMovName;
-    const movName = "Ive Been Alone…";
-    const movVal = "For far too long.\n\n67";
+    const movName = "I’ve Been Alone..";
+    const movVal = "For far too long.\n\n6789";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
