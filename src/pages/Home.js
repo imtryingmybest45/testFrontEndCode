@@ -37,7 +37,7 @@ function Home(props){
       { id: 8, text: "As Above So Below", to: "/AsAboveSoBelow", name: "As Above So Below" },
       { id: 10, text: "Insidious", to: "/Insidious", name: "Insidious" },
       { id: 11, text: "Insidious 2", to: "/Insidious2", name: "Insidious 2" },
-      { id: 12, text: "I’ve Been Alone…", to: "/IveBeenAlone", name: "I’ve Been Alone…" },
+      { id: 12, text: "Ive Been Alone…", to: "/IveBeenAlone", name: "Ive Been Alone…" },
       { id: 13, text: "In the Tall Grass", to: "/IntheTallGrass", name: "In the Tall Grass" },
     ];
   const linksDataSorted = [...linksDataUnsorted].sort((a, b) => {
