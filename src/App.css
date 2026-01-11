@@ -93,6 +93,21 @@
   word-wrap: break-word;
 }
 
+.parStyl {
+  font-size:x-large;
+  font-family:'Times New Roman', Times, serif;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  color:red;
+}
+
+.parStyl2 {
+  font-size:x-large;
+  font-family:'Times New Roman', Times, serif;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
 
 @keyframes App-logo-spin {
   from {
