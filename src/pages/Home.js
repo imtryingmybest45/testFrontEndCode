@@ -1,14 +1,8 @@
-import IKnowWhatYouDidLastSummer from './IKnowWhatYouDidLastSummer';
-import Boy2 from './Boy2';
-import Boy from './Boy';
-import IntheTallGrass from './IntheTallGrass';
-import IveBeenAlone from './IveBeenAlone';
-import Insidious2 from './Insidious2';
-import Insidious from './Insidious';
-import AsAboveSoBelow from './AsAboveSoBelow';
+import Annabelle from './Annabelle';
 import Terrifier3 from './Terrifier3';
-import InsidiousChapter3 from './InsidiousChapter3';
-import TheDescent2 from './TheDescent2';
+import InsidiousChapter2 from './InsidiousChapter2';
+import TheDescent from './TheDescent';
+import Insidious from './Insidious';
 import TheConjuring2 from './TheConjuring2';
 import {Routes} from 'react-router-dom';
 import {Route} from 'react-router-dom';
@@ -34,17 +28,11 @@ function Home(props){
     
     const linksDataUnsorted = [
       { id: 1, text: "The Conjuring 2", to: "/TheConjuring2", name: "The Conjuring 2" },
-      { id: 3, text: "The Descent 2", to: "/TheDescent2", name: "The Descent 2" },
-      { id: 5, text: "Insidious Chapter 3", to: "/InsidiousChapter3", name: "Insidious Chapter 3" },
+      { id: 2, text: "Insidious", to: "/Insidious", name: "Insidious" },
+      { id: 3, text: "The Descent", to: "/TheDescent", name: "The Descent" },
+      { id: 5, text: "Insidious Chapter 2", to: "/InsidiousChapter2", name: "Insidious Chapter 2" },
       { id: 6, text: "Terrifier 3", to: "/Terrifier3", name: "Terrifier 3" },
-      { id: 8, text: "As Above So Below", to: "/AsAboveSoBelow", name: "As Above So Below" },
-      { id: 10, text: "Insidious", to: "/Insidious", name: "Insidious" },
-      { id: 11, text: "Insidious 2", to: "/Insidious2", name: "Insidious 2" },
-      { id: 12, text: "I’ve Been Alone..", to: "/IveBeenAlone", name: "I’ve Been Alone.." },
-      { id: 13, text: "In the Tall Grass", to: "/IntheTallGrass", name: "In the Tall Grass" },
-      { id: 14, text: "Boy", to: "/Boy", name: "Boy" },
-      { id: 15, text: "Boy 2", to: "/Boy2", name: "Boy 2" },
-      { id: 16, text: "I Know What You Did Last Summer", to: "/IKnowWhatYouDidLastSummer", name: "I Know What You Did Last Summer" },
+      { id: 7, text: "Annabelle", to: "/Annabelle", name: "Annabelle" },
     ];
   const linksDataSorted = [...linksDataUnsorted].sort((a, b) => {
       return a.name.localeCompare(b.name);
@@ -65,17 +53,11 @@ function Home(props){
       {tfVar&&<p>Click on a movie name to see the review.</p>}
       <Routes>
         <Route path="/TheConjuring2" element={<TheConjuring2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/TheDescent2" element={<TheDescent2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/InsidiousChapter3" element={<InsidiousChapter3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/Terrifier3" element={<Terrifier3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/AsAboveSoBelow" element={<AsAboveSoBelow name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/Insidious" element={<Insidious name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/Insidious2" element={<Insidious2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/IveBeenAlone" element={<IveBeenAlone name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/IntheTallGrass" element={<IntheTallGrass name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/Boy" element={<Boy name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/Boy2" element={<Boy2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/IKnowWhatYouDidLastSummer" element={<IKnowWhatYouDidLastSummer name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/TheDescent" element={<TheDescent name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/InsidiousChapter2" element={<InsidiousChapter2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/Terrifier3" element={<Terrifier3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/Annabelle" element={<Annabelle name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
       </Routes>
       <nav>
         <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>
