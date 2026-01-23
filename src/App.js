@@ -56,6 +56,23 @@ function App(){
     }
   };
 
+  const handleBackButton = (event) => {
+    if (window.location.pathname === "/" || window.location.pathname === "/*"){
+      settfVar(true);
+    }
+    else{
+      settfVar(false);
+    }
+  };
+
+  useEffect(() => {
+    window.history.pushState(null, document.title, window.location.href);
+    window.addEventListener('popstate', handleBackButton);
+    return () => {
+      window.removeEventListener('popstate', handleBackButton);
+    };
+  }, []); // Empty dependency array ensures this runs once on mount/unmount
+
   useEffect(() => {
     handlePageLoad();
   },[]); // The empty dependency array ensures this runs only once
