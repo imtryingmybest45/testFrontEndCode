@@ -108,6 +108,64 @@
   word-wrap: break-word;
 }
 
+.tierList {
+  display: flex;
+  flex-direction: row;
+  width: 100vw;
+  height: 21vh;
+  margin-top: 1vh;
+  flex: 1;
+  flex-direction: wrap;
+}
+
+.largeTierList{
+  display: flex;
+  flex-direction: column;
+}
+
+.inside1{
+  display: flex;
+  background-color:blue;
+  width: 10vw;
+  margin-left: 1vw;
+  margin-top: 1vw;
+}
+
+.inside2{
+  display: flex;
+  width: 80vw;
+  margin-left: 1vw;
+  margin-top: 1vw;
+  background-color: red;
+  flex-wrap: wrap; /* This property makes items wrap to the next line */
+}
+
+.inside3{
+  display: flex;
+  width: 80vw;
+  margin-left: 1vw;
+  margin-top: 1vw;
+  background-color: rgb(255, 0, 191);
+  flex-wrap: wrap; /* This property makes items wrap to the next line */
+}
+
+.inside2 img{
+  /* Optional: ensures images fit within their container */
+  max-width: 10%;
+  max-height: auto;
+  width: 50%;
+  height: auto;
+}
+
+.inside3 img{
+ /* Optional: ensures images fit within their container */
+  max-width: 10%;
+  max-height: auto;
+  width: 50%;
+  height: auto;
+}
+
+
 
 @keyframes App-logo-spin {
   from {
