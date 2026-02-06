@@ -153,7 +153,7 @@
   /* Optional: ensures images fit within their container */
   max-width: 100%;
   max-height: auto;
-  width: 10%;
+  width: 100px;
   height: auto;
 }
 
