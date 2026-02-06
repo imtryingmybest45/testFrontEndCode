@@ -151,9 +151,9 @@
 
 .inside2 img{
   /* Optional: ensures images fit within their container */
-  max-width: 10%;
+  max-width: 100%;
   max-height: auto;
-  width: 50%;
+  width: 10%;
   height: auto;
 }
 
