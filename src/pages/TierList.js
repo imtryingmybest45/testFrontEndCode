@@ -6,11 +6,16 @@ function TierList(props){
   let setTFVar = props.age;
 
   //const navigate = useNavigate();
+  //onClick={handleImageClick()}
 
-  const handleImageClick = () => {
+  /*const handleImageClick = (linkName) => {
+    console.log("hello");
    // navigate(linkName);
-   setTFVar(false);
-   console.log("hello");
+   //setTFVar(false);
+  };*/
+
+ const handleImageClick = () => {
+    setTFVar(false);
   };
 
   return (
@@ -24,7 +29,7 @@ function TierList(props){
                 if (item.tier === 'S') {
                     return (
                  <Link to={item.to}>
-                    <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick()}></img>
+                    <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick}></img>
                 </Link>
                     );
                 } else {
@@ -42,7 +47,7 @@ function TierList(props){
                 if (item.tier === 'A') {
                     return (
                     <Link to={item.to}>
-                        <img src={item.moviePoster} alt={"hello"}  onClick={handleImageClick()}></img>
+                        <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick}></img>
                     </Link>
                     );
                 } else {
@@ -60,7 +65,7 @@ function TierList(props){
                 if (item.tier === 'B') {
                     return (
                     <Link to={item.to}>
-                        <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick()}></img>
+                        <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick}></img>
                     </Link>
                     );
                 } else {
@@ -78,7 +83,7 @@ function TierList(props){
                 if (item.tier === 'C') {
                     return (
                     <Link to={item.to}>
-                        <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick()}></img>
+                        <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick}></img>
                     </Link>
                     );
                 } else {
