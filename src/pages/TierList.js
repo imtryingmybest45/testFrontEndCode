@@ -19,7 +19,9 @@ function TierList(props){
     <div className = 'largeTierList'>
       {/* Red Box */}
       <div className ='tierList'>
-        <div className = 'sTier'></div>
+        <div className = 'sTier'>
+            <p className = 'theTierFont'>S</p>
+        </div>
         <div className = 'sTierList'>
             {Object.values(linksData).map(item => {
                 // Use a standard if/else block within the IIFE
@@ -37,7 +39,9 @@ function TierList(props){
       </div>
 
       <div className ='tierList'>
-        <div className = 'aTier'></div>
+        <div className = 'aTier'>
+            <p className = 'theTierFont'>A</p>
+        </div>
         <div className = 'aTierList'>
             {Object.values(linksData).map(item => {
                 // Use a standard if/else block within the IIFE
@@ -55,7 +59,9 @@ function TierList(props){
       </div>
 
       <div className ='tierList'>
-        <div className = 'bTier'></div>
+        <div className = 'bTier'>
+            <p className = 'theTierFont'>B</p>
+        </div>
         <div className = 'bTierList'>
             {Object.values(linksData).map(item => {
                 // Use a standard if/else block within the IIFE
@@ -73,7 +79,9 @@ function TierList(props){
       </div>
 
       <div className ='tierList'>
-        <div className = 'cTier'></div>
+        <div className = 'cTier'>
+            <p className = 'theTierFont'>C</p>
+        </div>
         <div className = 'cTierList'>
             {Object.values(linksData).map(item => {
                 // Use a standard if/else block within the IIFE
@@ -89,6 +97,66 @@ function TierList(props){
             })}
         </div>
       </div>
+
+    <div className ='tierList'>
+        <div className = 'dTier'>
+            <p className = 'theTierFont'>D</p>
+        </div>
+        <div className = 'dTierList'>
+            {Object.values(linksData).map(item => {
+                // Use a standard if/else block within the IIFE
+                if (item.tier === 'D') {
+                    return (
+                    <Link to={item.to}>
+                        <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick}></img>
+                    </Link>
+                    );
+                } else {
+                    return null; // Must return null or some other element if the condition is false
+                }
+            })}
+        </div>
+      </div>
+
+    <div className ='tierList'>
+        <div className = 'fTier'>
+            <p className = 'theTierFont'>F</p>
+        </div>
+        <div className = 'fTierList'>
+            {Object.values(linksData).map(item => {
+                // Use a standard if/else block within the IIFE
+                if (item.tier === 'F') {
+                    return (
+                    <Link to={item.to}>
+                        <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick}></img>
+                    </Link>
+                    );
+                } else {
+                    return null; // Must return null or some other element if the condition is false
+                }
+            })}
+        </div>
+      </div>
+
+    <div className ='tierList'>
+        <div className = 'noTier'>
+            <p className = 'theTierFont'>NO</p>
+        </div>
+        <div className = 'noTierList'>
+            {Object.values(linksData).map(item => {
+                // Use a standard if/else block within the IIFE
+                if (item.tier === 'N') {
+                    return (
+                    <Link to={item.to}>
+                        <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick}></img>
+                    </Link>
+                    );
+                } else {
+                    return null; // Must return null or some other element if the condition is false
+                }
+            })}
+        </div>
+    </div>
 
     </div>
   );
