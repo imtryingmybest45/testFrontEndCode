@@ -20,8 +20,8 @@ function AvatarTheWayofWater(props){
 
     const origMovName = props.origMovName;
     const movName = "Avatar: The Way of Water";
-    const movVal = "This movie was PHENOMENAL";
-    const movTier = "S";
+    const movVal = "This movie was pretty good.";
+    const movTier = "A";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
@@ -61,8 +61,8 @@ function AvatarTheWayofWater(props){
         }
         else{
         setMess("Please wait, your review is loading.");
-        axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
-        //axios.post('http://localhost:8080/editEndpoint',formData)
+        //axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
+        axios.post('http://localhost:8080/editEndpoint',formData)
         .then(response => setMess(response.data))
         }
     };
