@@ -123,7 +123,7 @@
   flex-direction: column;
 }
 
-.inside1{
+.sTier {
   display: flex;
   background-color:blue;
   width: 10vw;
@@ -131,7 +131,31 @@
   margin-top: 1vw;
 }
 
-.inside2{
+.aTier {
+  display: flex;
+  background-color:blue;
+  width: 10vw;
+  margin-left: 1vw;
+  margin-top: 1vw;
+}
+
+.bTier {
+  display: flex;
+  background-color:blue;
+  width: 10vw;
+  margin-left: 1vw;
+  margin-top: 1vw;
+}
+
+.cTier {
+  display: flex;
+  background-color:blue;
+  width: 10vw;
+  margin-left: 1vw;
+  margin-top: 1vw;
+}
+
+.sTierList{
   display: flex;
   width: 80vw;
   margin-left: 1vw;
@@ -140,7 +164,7 @@
   flex-wrap: wrap; /* This property makes items wrap to the next line */
 }
 
-.inside3{
+.aTierList{
   display: flex;
   width: 80vw;
   margin-left: 1vw;
@@ -149,7 +173,25 @@
   flex-wrap: wrap; /* This property makes items wrap to the next line */
 }
 
-.inside2 img{
+.bTierList{
+  display: flex;
+  width: 80vw;
+  margin-left: 1vw;
+  margin-top: 1vw;
+  background-color: red;
+  flex-wrap: wrap; /* This property makes items wrap to the next line */
+}
+
+.cTierList{
+  display: flex;
+  width: 80vw;
+  margin-left: 1vw;
+  margin-top: 1vw;
+  background-color: rgb(255, 0, 191);
+  flex-wrap: wrap; /* This property makes items wrap to the next line */
+}
+
+.sTierList img{
   /* Optional: ensures images fit within their container */
   max-width: 100%;
   max-height: auto;
@@ -157,11 +199,29 @@
   height: auto;
 }
 
-.inside3 img{
+.aTierList img{
  /* Optional: ensures images fit within their container */
-  max-width: 10%;
+  /*max-width: 10%;*/
+  max-width: 100%;
   max-height: auto;
-  width: 50%;
+  width: 100px;
+  height: auto;
+}
+
+.bTierList img{
+  /* Optional: ensures images fit within their container */
+  max-width: 100%;
+  max-height: auto;
+  width: 100px;
+  height: auto;
+}
+
+.cTierList img{
+ /* Optional: ensures images fit within their container */
+  /*max-width: 10%;*/
+  max-width: 100%;
+  max-height: auto;
+  width: 100px;
   height: auto;
 }
 

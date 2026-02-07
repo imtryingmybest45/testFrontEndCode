@@ -90,9 +90,9 @@ function App(){
         <Route path="*" element={<Home {...userData} linksStuff={setLinks} origMovName={origMovName}/>} />
         <Route path ="/Admin" element={<Admin />}/>
         <Route path ="/Accolades" element={<Accolades />}/>
-        <Route path ="/TierList" element={<TierList />}/>
+        <Route path ="/TierList" element={<TierList {...userData} linksData={links}/>}/>
         <Route path ="/SubmissionPage" element={<SubmissionPage />}/>
-        <Route path ="/DeletePage" element={<DeletePage linksData={links}/>}/>
+        <Route path ="/DeletePage" element={<DeletePage {...userData} linksData={links}/>}/>
         <Route path ="/EditPage" element={<EditPage {...userData} linksData={links} setOrigMovName={setOrigMovName}/>}/>
         <Route path ="/OptionsPage" element={<OptionsPage />}/>
       </Routes>
