@@ -16,12 +16,12 @@ function usePersistedState(key, defaultValue) {
   return [state, setState];
 }
 
-function Avatar(props){
+function AvatarTheWayofWater(props){
 
     const origMovName = props.origMovName;
-    const movName = "Avatar";
-    const movVal = "This movie was ok";
-    const movTier = "C";
+    const movName = "Avatar: The Way of Water";
+    const movVal = "This movie was PHENOMENAL";
+    const movTier = "S";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
@@ -83,7 +83,7 @@ function Avatar(props){
     return(
         <div>
             {varVar && <h1>{movName}</h1>}
-            {varVar && <img src={'https://m.media-amazon.com/images/M/MV5BMDEzMmQwZjctZWU2My00MWNlLWE0NjItMDJlYTRlNGJiZjcyXkEyXkFqcGc@._V1_SX300.jpg'} alt="This is the movie poster for this movie."/>}
+            {varVar && <img src={'https://m.media-amazon.com/images/M/MV5BNWI0Y2NkOWEtMmM2OC00MjQ3LWI1YzItZGQxYzQ3NzI4NWZmXkEyXkFqcGc@._V1_SX300.jpg'} alt="This is the movie poster for this movie."/>}
             {varVar && <pre className = "paragraphStylin">{movVal}</pre>}
             {!varVar &&<form onSubmit={handleSubmit}>
                 <label className="linkss">
@@ -105,4 +105,4 @@ function Avatar(props){
     )
 }
 
-export default Avatar;
+export default AvatarTheWayofWater;
