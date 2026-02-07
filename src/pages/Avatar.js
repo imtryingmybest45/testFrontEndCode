@@ -21,7 +21,7 @@ function Avatar(props){
     const origMovName = props.origMovName;
     const movName = "Avatar";
     const movVal = "This movie was ok";
-    const movTier = "Insert Movie Tier here";
+    const movTier = "C";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
@@ -61,8 +61,8 @@ function Avatar(props){
         }
         else{
         setMess("Please wait, your review is loading.");
-        axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
-        //axios.post('http://localhost:8080/editEndpoint',formData)
+        //axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
+        axios.post('http://localhost:8080/editEndpoint',formData)
         .then(response => setMess(response.data))
         }
     };
