@@ -3,11 +3,13 @@ import { Link } from 'react-router-dom';
 function TierList(props){
 
   let {linksData} = props;
+  let setTFVar = props.age;
 
   //const navigate = useNavigate();
 
   const handleImageClick = () => {
    // navigate(linkName);
+   setTFVar(false);
    console.log("hello");
   };
 
@@ -19,7 +21,7 @@ function TierList(props){
         <div className = 'sTierList'>
             {Object.values(linksData).map(item => {
                 // Use a standard if/else block within the IIFE
-                if (item.tier == 'S') {
+                if (item.tier === 'S') {
                     return (
                  <Link to={item.to}>
                     <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick()}></img>
@@ -37,7 +39,7 @@ function TierList(props){
         <div className = 'aTierList'>
             {Object.values(linksData).map(item => {
                 // Use a standard if/else block within the IIFE
-                if (item.tier == 'A') {
+                if (item.tier === 'A') {
                     return (
                     <Link to={item.to}>
                         <img src={item.moviePoster} alt={"hello"}  onClick={handleImageClick()}></img>
@@ -55,7 +57,7 @@ function TierList(props){
         <div className = 'bTierList'>
             {Object.values(linksData).map(item => {
                 // Use a standard if/else block within the IIFE
-                if (item.tier == 'B') {
+                if (item.tier === 'B') {
                     return (
                     <Link to={item.to}>
                         <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick()}></img>
@@ -73,7 +75,7 @@ function TierList(props){
         <div className = 'cTierList'>
             {Object.values(linksData).map(item => {
                 // Use a standard if/else block within the IIFE
-                if (item.tier == 'C') {
+                if (item.tier === 'C') {
                     return (
                     <Link to={item.to}>
                         <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick()}></img>
