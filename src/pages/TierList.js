@@ -140,7 +140,7 @@ function TierList(props){
 
     <div className ='tierList'>
         <div className = 'noTier'>
-            <p className = 'theTierFont'>NO</p>
+            <p className = 'theNoTierFont'>NO</p>
         </div>
         <div className = 'noTierList'>
             {Object.values(linksData).map(item => {
