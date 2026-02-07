@@ -318,13 +318,13 @@
 }
 
 .theTierFont{
-  font-size:5cap;
+  font-size:3cap;
   color:rgb(255, 255, 255);
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 .theNoTierFont{
-  font-size:2cap;
+  font-size:3cap;
   color:rgb(255, 255, 255);
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
