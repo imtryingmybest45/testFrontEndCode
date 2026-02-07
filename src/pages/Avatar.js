@@ -20,7 +20,7 @@ function Avatar(props){
 
     const origMovName = props.origMovName;
     const movName = "Avatar";
-    const movVal = "This is the movie review for Avatar.";
+    const movVal = "wow you can really dance";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
