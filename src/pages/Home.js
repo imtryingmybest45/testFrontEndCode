@@ -1,3 +1,4 @@
+import ToyStory3 from './ToyStory3';
 import ToyStorya from './ToyStorya';
 import ToyStory4 from './ToyStory4';
 import ToyStory2 from './ToyStory2';
@@ -49,6 +50,7 @@ function Home(props){
       { id: 14, text: "Toy Story 2", to: "/ToyStory2", name: "Toy Story 2", moviePoster: 'https://m.media-amazon.com/images/M/MV5BNzVmODlhMDEtY2YxZi00OTVjLTlkNTktN2Q2OTRlM2I4M2FhXkEyXkFqcGc@._V1_SX300.jpg', tier: 'C'},
       { id: 16, text: "Toy Story 4", to: "/ToyStory4", name: "Toy Story 4", moviePoster: 'https://m.media-amazon.com/images/M/MV5BMTYzMDM4NzkxOV5BMl5BanBnXkFtZTgwNzM1Mzg2NzM@._V1_SX300.jpg', tier: 'S'},
       { id: 17, text: "Toy Storya", to: "/ToyStorya", name: "Toy Storya", moviePoster: 'error', tier: 'C'},
+      { id: 18, text: "Toy Story 3", to: "/ToyStory3", name: "Toy Story 3", moviePoster: 'https://m.media-amazon.com/images/M/MV5BMTgxOTY4Mjc0MF5BMl5BanBnXkFtZTcwNTA4MDQyMw@@._V1_SX300.jpg', tier: 'C'},
     ];
   const linksDataSorted = [...linksDataUnsorted].sort((a, b) => {
       return a.name.localeCompare(b.name);
@@ -84,6 +86,7 @@ function Home(props){
         <Route path="/ToyStory2" element={<ToyStory2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/ToyStory4" element={<ToyStory4 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/ToyStorya" element={<ToyStorya name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/ToyStory3" element={<ToyStory3 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
       </Routes>
       <nav>
         <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>
