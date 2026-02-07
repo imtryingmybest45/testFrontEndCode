@@ -25,7 +25,6 @@ function AnnabelleComesHome(props){
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
-
     const value = '';
     const inputRef = useRef(null);
     const inputRef2 = useRef(null);
@@ -61,8 +60,8 @@ function AnnabelleComesHome(props){
         }
         else{
         setMess("Please wait, your review is loading.");
-        //axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
-        axios.post('http://localhost:8080/editEndpoint',formData)
+        axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
+        //axios.post('http://localhost:8080/editEndpoint',formData)
         .then(response => setMess(response.data))
         }
     };

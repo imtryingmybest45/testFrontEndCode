@@ -61,13 +61,13 @@ function GoodBoy(props){
         }
         else{
         setMess("Please wait, your review is loading.");
-        //axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
-        axios.post('http://localhost:8080/editEndpoint',formData)
+        axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
+        //axios.post('http://localhost:8080/editEndpoint',formData)
         .then(response => setMess(response.data))
         }
     };
 
-     useEffect(() => {
+    useEffect(() => {
     const handlePageLoad = (prevPath) => {
         if (prevPath === "/EditPage"){
             setVarVar(false);
@@ -76,7 +76,6 @@ function GoodBoy(props){
             setVarVar(true);
         }
     };
-
     handlePageLoad(prevPath);
   },[prevPath]); // The empty dependency array ensures this runs only once
 

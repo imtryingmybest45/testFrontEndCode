@@ -1,22 +1,19 @@
 import { Link } from 'react-router-dom';
+import {useEffect} from 'react';
 
 function TierList(props){
 
   let {linksData} = props;
   let setTFVar = props.age;
-
-  //const navigate = useNavigate();
-  //onClick={handleImageClick()}
-
-  /*const handleImageClick = (linkName) => {
-    console.log("hello");
-   // navigate(linkName);
-   //setTFVar(false);
-  };*/
+  let setPrevPath = props.setPrevPath;
 
  const handleImageClick = () => {
     setTFVar(false);
   };
+
+ useEffect(() => {
+     setPrevPath("/TierList");
+ },[setPrevPath]);
 
   return (
     <div className = 'largeTierList'>
