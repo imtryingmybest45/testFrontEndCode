@@ -21,7 +21,7 @@ function AvatarTheWayofWater(props){
     const origMovName = props.origMovName;
     const movName = "Avatar: The Way of Water";
     const movVal = "This movie was PHENOMENAL";
-    const movTier = "Insert Movie Tier here";
+    const movTier = "S";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
