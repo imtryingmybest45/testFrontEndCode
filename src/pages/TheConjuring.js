@@ -21,7 +21,7 @@ function TheConjuring(props){
     const origMovName = props.origMovName;
     const movName = "The Conjuring";
     const movVal = "Good movie, sorry";
-    const movTier = "B";
+    const movTier = "C";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
