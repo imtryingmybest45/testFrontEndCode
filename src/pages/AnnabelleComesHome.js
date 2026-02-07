@@ -25,6 +25,7 @@ function AnnabelleComesHome(props){
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
+
     const value = '';
     const inputRef = useRef(null);
     const inputRef2 = useRef(null);
