@@ -21,7 +21,7 @@ function BlackPhone(props){
     const origMovName = props.origMovName;
     const movName = "Black Phone";
     const movVal = "good movie";
-    const movTier = "A";
+    const movTier = "NO";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
