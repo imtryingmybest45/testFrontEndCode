@@ -21,7 +21,7 @@ function TheGirlNextDoor2007(props){
     const origMovName = props.origMovName;
     const movName = "The Girl Next Door (2007)";
     const movVal = "bad movie";
-    const movTier = "NO";
+    const movTier = "F";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
