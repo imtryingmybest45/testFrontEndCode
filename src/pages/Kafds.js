@@ -21,7 +21,7 @@ function Kafds(props){
     const origMovName = props.origMovName;
     const movName = "Kafds";
     const movVal = "fdsa";
-    const movTier = "A";
+    const movTier = "B";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
