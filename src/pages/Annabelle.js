@@ -56,8 +56,12 @@ function Annabelle(props){
 
     const handleSubmit = (e) => {
         e.preventDefault(); // Prevents default form submission behavior (page reload)
+        const allowedStrings = ['S', 'A', 'B', 'C', 'D', 'F', 'NO'];
         if(/^[a-z]/.test(formData.movieName)){
             setMess("First word of movie name must be uppercase.")
+        }
+        else if (!allowedStrings.includes(formData.movieTier)){
+            setMess("Can only input S, A, B, C, D, F, or NO.")
         }
         else{
         setMess("Please wait, your review is loading.");
