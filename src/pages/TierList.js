@@ -145,7 +145,7 @@ function TierList(props){
         <div className = 'noTierList'>
             {Object.values(linksData).map(item => {
                 // Use a standard if/else block within the IIFE
-                if (item.tier === 'N') {
+                if (item.tier === 'NO') {
                     return (
                     <Link to={item.to}>
                         <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick}></img>
