@@ -1,3 +1,4 @@
+import Wow from './Wow';
 import BlackPhone from './BlackPhone';
 import TheGirlNextDoor2007 from './TheGirlNextDoor2007';
 import Kafds from './Kafds';
@@ -47,6 +48,7 @@ function Home(props){
       { id: 12, text: "Kafds", to: "/Kafds", name: "Kafds", moviePoster: 'error', tier: 'B'},
       { id: 13, text: "The Girl Next Door (2007)", to: "/TheGirlNextDoor2007", name: "The Girl Next Door (2007)", moviePoster: 'https://m.media-amazon.com/images/M/MV5BNTk4ZmI4YzctNTM5MC00YzY1LThjOTgtZjA5OTcwN2ZjNDFlXkEyXkFqcGdeQXVyMjE0MzE1MA@@._V1_SX300.jpg', tier: 'F'},
       { id: 14, text: "Black Phone", to: "/BlackPhone", name: "Black Phone", moviePoster: 'https://m.media-amazon.com/images/M/MV5BMjFhZTcxOTktMzllMS00MzIzLWJhODEtZDU5YTFkNzRjZWQyXkEyXkFqcGc@._V1_SX300.jpg', tier: 'NO'},
+      { id: 15, text: "Wow", to: "/Wow", name: "Wow", moviePoster: 'https://m.media-amazon.com/images/M/MV5BYWEyNjI2YWQtODk0NS00MzcxLWI3MTUtODI3YWYxOTA2ZTVhXkEyXkFqcGc@._V1_SX300.jpg', tier: 'A'},
     ];
   const linksDataSorted = [...linksDataUnsorted].sort((a, b) => {
       return a.name.localeCompare(b.name);
@@ -81,6 +83,7 @@ function Home(props){
         <Route path="/Kafds" element={<Kafds name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/TheGirlNextDoor2007" element={<TheGirlNextDoor2007 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/BlackPhone" element={<BlackPhone name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/Wow" element={<Wow name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
       </Routes>
       <nav>
         <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>
