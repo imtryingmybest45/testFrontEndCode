@@ -20,8 +20,8 @@ function Sinister(props){
 
     const origMovName = props.origMovName;
     const movName = "Sinister";
-    const movVal = "great movie";
-    const movTier = "NO";
+    const movVal = "great movie, wow, amazingly amazing";
+    const movTier = "A";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
