@@ -20,7 +20,7 @@ function BlackPhone(props){
 
     const origMovName = props.origMovName;
     const movName = "Black Phone";
-    const movVal = "good movie, would absolutely watch again, 10/10";
+    const movVal = "good movie, would absolutely watch again, 10/10, huzzah";
     const movTier = "NO";
 
     const [varVar, setVarVar] = useState(true);
@@ -65,8 +65,8 @@ function BlackPhone(props){
         }
         else{
         setMess("Please wait, your review is loading.");
-        //axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
-        axios.post('http://localhost:8080/editEndpoint',formData)
+        axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
+        //axios.post('http://localhost:8080/editEndpoint',formData)
         .then(response => setMess(response.data))
         }
     };
