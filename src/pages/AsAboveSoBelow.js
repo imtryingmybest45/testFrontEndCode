@@ -20,7 +20,7 @@ function AsAboveSoBelow(props){
 
     const origMovName = props.origMovName;
     const movName = "As Above, So Below";
-    const movVal = "great movie";
+    const movVal = "great movie, 10/10, I love this movie so much I could die";
     const movTier = "A";
 
     const [varVar, setVarVar] = useState(true);
