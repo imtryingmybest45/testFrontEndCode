@@ -20,8 +20,8 @@ function Kafds(props){
 
     const origMovName = props.origMovName;
     const movName = "Kafds";
-    const movVal = "fdsa, this is a bad movie but also a good movie";
-    const movTier = "B";
+    const movVal = "fdsa";
+    const movTier = "NO";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
