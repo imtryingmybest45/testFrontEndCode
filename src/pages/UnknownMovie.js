@@ -22,7 +22,7 @@ function UnknownMovie(props){
     const origMovName = props.origMovName;
     const movName = "Unknown Movie";
     const movVal = "Great movie wonderful wonderful wonderful wonderful this is six words";
-    const movTier = "D";
+    const movTier = "S";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
