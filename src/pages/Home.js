@@ -50,7 +50,7 @@ function Home(props){
       { id: 13, text: "The Girl Yext Door (2007)", to: "/TheGirlYextDoor2007", name: "The Girl Yext Door (2007)", moviePoster: 'https://m.media-amazon.com/images/M/MV5BYTk4ZmI4YzctYTM5MC00YzY1LThjOTgtZjA5OTcwY2ZjYDFlXkEyXkFqcGdeQXVyMjE0MzE1MA@@._V1_SX300.jpg', tier: 'S', longReview: 'Y',},
       { id: 14, text: "Black Phone", to: "/BlackPhone", name: "Black Phone", moviePoster: 'https://m.media-amazon.com/images/M/MV5BMjFhZTcxOTktMzllMS00MzIzLWJhODEtZDU5YTFkNzRjZWQyXkEyXkFqcGc@._V1_SX300.jpg', tier: 'NO', longReview: 'Y',},
       { id: 15, text: "Wow", to: "/Wow", name: "Wow", moviePoster: 'https://m.media-amazon.com/images/M/MV5BYWEyNjI2YWQtODk0NS00MzcxLWI3MTUtODI3YWYxOTA2ZTVhXkEyXkFqcGc@._V1_SX300.jpg', tier: 'A', longReview: 'N',},
-      { id: 16, text: "Sinister", to: "/Sinister", name: "Sinister", moviePoster: 'https://m.media-amazon.com/images/M/MV5BMjI5MTg1Njg0Ml5BMl5BanBnXkFtZTcwNzg2Mjc4Nw@@._V1_SX300.jpg', tier: 'S', longReview: 'N',},
+      { id: 16, text: "Sinister", to: "/Sinister", name: "Sinister", moviePoster: 'https://m.media-amazon.com/images/M/MV5BMjI5MTg1Njg0Ml5BMl5BanBnXkFtZTcwNzg2Mjc4Nw@@._V1_SX300.jpg', tier: 'NO', longReview: 'N',},
     ];
   const linksDataSorted = [...linksDataUnsorted].sort((a, b) => {
       return a.name.localeCompare(b.name);
