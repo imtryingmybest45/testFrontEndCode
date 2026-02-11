@@ -21,7 +21,7 @@ function AsAboveSoBelow(props){
     const origMovName = props.origMovName;
     const movName = "As Above, So Below";
     const movVal = "Awesome found footage movie, I would rate it a 10/10";
-    const movTier = "A";
+    const movTier = "C";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
