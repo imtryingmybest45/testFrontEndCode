@@ -14,7 +14,6 @@ import {Link} from 'react-router-dom';
 import {useEffect} from 'react';
 import {useMemo} from 'react';
 import stoplizard from './stoplizard.png';
-import boo from './boo.png'
 
 function Home(props){
 
