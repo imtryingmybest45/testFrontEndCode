@@ -16,12 +16,12 @@ function usePersistedState(key, defaultValue) {
   return [state, setState];
 }
 
-function TheHumanCentipedeFirstSequence(props){
+function TheHumanCentipede2ColorVersion(props){
 
     const origMovName = props.origMovName;
-    const movName = "The Human Centipede (First Sequence)";
-    const movVal = "This movie is cursed";
-    const movTier = "D";
+    const movName = "The Human Centipede 2 Color Version";
+    const movVal = "This movie is cursed, don't wath it";
+    const movTier = "C";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
@@ -87,7 +87,7 @@ function TheHumanCentipedeFirstSequence(props){
     return(
         <div>
             {varVar && <h1>{movName}</h1>}
-            {varVar && <img src={'https://m.media-amazon.com/images/M/MV5BMTY4Nzk3NzYxOF5BMl5BanBnXkFtZTcwODQwNjQzMw@@._V1_SX300.jpg'} alt="This is the movie poster for this movie."/>}
+            {varVar && <img src={'error'} alt="This is the movie poster for this movie."/>}
             {varVar && <pre className = "paragraphStylin">{movVal}</pre>}
             {!varVar &&<form onSubmit={handleSubmit}>
                 <label className="linkss">
@@ -109,4 +109,4 @@ function TheHumanCentipedeFirstSequence(props){
     )
 }
 
-export default TheHumanCentipedeFirstSequence;
+export default TheHumanCentipede2ColorVersion;
