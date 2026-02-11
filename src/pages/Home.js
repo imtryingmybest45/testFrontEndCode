@@ -1,8 +1,6 @@
-import RandomMov from './RandomMov';
 import TheRuleofJennyPen from './TheRuleofJennyPen';
 import AvatarFireandAsh from './AvatarFireandAsh';
 import AsAboveSoBelow from './AsAboveSoBelow';
-import TheHumanCentipede2ColorVersion from './TheHumanCentipede2ColorVersion';
 import Sinister from './Sinister';
 import BlackPhone2 from './BlackPhone2';
 import GoodBoy from './GoodBoy';
@@ -20,6 +18,7 @@ import {Link} from 'react-router-dom';
 import {useEffect} from 'react';
 import {useMemo} from 'react';
 import stoplizard from './stoplizard.png';
+import boo from './boo.png'
 
 function Home(props){
 
@@ -48,11 +47,9 @@ function Home(props){
       { id: 10, text: "Good Boy", to: "/GoodBoy", name: "Good Boy", moviePoster: 'https://m.media-amazon.com/images/M/MV5BODJhM2JhYjktN2JlMC00YzVjLWI3NjctMTgzYjhhZDk3ZjU2XkEyXkFqcGc@._V1_SX300.jpg', tier: 'B', longReview: 'Y',},
       { id: 11, text: "Black Phone 2", to: "/BlackPhone2", name: "Black Phone 2", moviePoster: 'https://m.media-amazon.com/images/M/MV5BMTVjMzNmZGYtOWU5NS00NDYzLThhZTktZGNlODIwYWVhMDRmXkEyXkFqcGc@._V1_SX300.jpg', tier: 'B', longReview: 'Y',},
       { id: 12, text: "Sinister", to: "/Sinister", name: "Sinister", moviePoster: 'https://m.media-amazon.com/images/M/MV5BMjI5MTg1Njg0Ml5BMl5BanBnXkFtZTcwNzg2Mjc4Nw@@._V1_SX300.jpg', tier: 'B', longReview: 'Y',},
-      { id: 14, text: "The Human Centipede 2 Color Version", to: "/TheHumanCentipede2ColorVersion", name: "The Human Centipede 2 Color Version", moviePoster: 'error', tier: 'C', longReview: 'Y',},
-      { id: 15, text: "As Above, So Below", to: "/AsAboveSoBelow", name: "As Above, So Below", moviePoster: 'https://m.media-amazon.com/images/M/MV5BMTQzNzg0NDI2MF5BMl5BanBnXkFtZTgwMzgxNzY2MTE@._V1_SX300.jpg', tier: 'A', longReview: 'Y',},
+      { id: 15, text: "As Above, So Below", to: "/AsAboveSoBelow", name: "As Above, So Below", moviePoster: boo, tier: 'A', longReview: 'Y',},
       { id: 16, text: "Avatar: Fire and Ash", to: "/AvatarFireandAsh", name: "Avatar: Fire and Ash", moviePoster: 'https://m.media-amazon.com/images/M/MV5BZDYxY2I1OGMtN2Y4MS00ZmU1LTgyNDAtODA0MzAyYjI0N2Y2XkEyXkFqcGc@._V1_SX300.jpg', tier: 'A', longReview: 'Y',},
       { id: 17, text: "The Rule of Jenny Pen", to: "/TheRuleofJennyPen", name: "The Rule of Jenny Pen", moviePoster: 'https://m.media-amazon.com/images/M/MV5BMTJiMzg2ODgtNDhhMi00YmE3LWI3ZmEtOGUwYjFlOTFjYTZmXkEyXkFqcGc@._V1_SX300.jpg', tier: 'F', longReview: 'N',},
-      { id: 18, text: "Random Mov", to: "/RandomMov", name: "Random Mov", moviePoster: 'error', tier: 'A', longReview: 'N',},
     ];
   const linksDataSorted = [...linksDataUnsorted].sort((a, b) => {
       return a.name.localeCompare(b.name);
@@ -85,11 +82,9 @@ function Home(props){
         <Route path="/GoodBoy" element={<GoodBoy name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/BlackPhone2" element={<BlackPhone2 name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/Sinister" element={<Sinister name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/TheHumanCentipede2ColorVersion" element={<TheHumanCentipede2ColorVersion name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/AsAboveSoBelow" element={<AsAboveSoBelow name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/AvatarFireandAsh" element={<AvatarFireandAsh name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/TheRuleofJennyPen" element={<TheRuleofJennyPen name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
-        <Route path="/RandomMov" element={<RandomMov name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
       </Routes>
       <nav>
         <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>

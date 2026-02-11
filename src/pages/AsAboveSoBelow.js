@@ -1,6 +1,7 @@
 import {useEffect} from 'react';
 import {useState,useLayoutEffect,useRef} from 'react';
 import axios from 'axios';
+import boo from './boo.png'
 
 function usePersistedState(key, defaultValue) {
   // Initialize state with value from localStorage if available
@@ -87,7 +88,7 @@ function AsAboveSoBelow(props){
     return(
         <div>
             {varVar && <h1>{movName}</h1>}
-            {varVar && <img src={'https://m.media-amazon.com/images/M/MV5BMTQzNzg0NDI2MF5BMl5BanBnXkFtZTgwMzgxNzY2MTE@._V1_SX300.jpg'} alt="This is the movie poster for this movie."/>}
+            {varVar && <img src={boo} alt="This is the movie poster for this movie."/>}
             {varVar && <pre className = "paragraphStylin">{movVal}</pre>}
             {!varVar &&<form onSubmit={handleSubmit}>
                 <label className="linkss">
