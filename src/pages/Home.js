@@ -1,3 +1,4 @@
+import TheConjuring from './TheConjuring';
 import TheRuleofJennyPen from './TheRuleofJennyPen';
 import AvatarFireandAsh from './AvatarFireandAsh';
 import AsAboveSoBelow from './AsAboveSoBelow';
@@ -50,6 +51,7 @@ function Home(props){
       { id: 15, text: "As Above, So Below", to: "/AsAboveSoBelow", name: "As Above, So Below", moviePoster: boo, tier: 'A', longReview: 'Y',},
       { id: 16, text: "Avatar: Fire and Ash", to: "/AvatarFireandAsh", name: "Avatar: Fire and Ash", moviePoster: 'https://m.media-amazon.com/images/M/MV5BZDYxY2I1OGMtN2Y4MS00ZmU1LTgyNDAtODA0MzAyYjI0N2Y2XkEyXkFqcGc@._V1_SX300.jpg', tier: 'A', longReview: 'Y',},
       { id: 17, text: "The Rule of Jenny Pen", to: "/TheRuleofJennyPen", name: "The Rule of Jenny Pen", moviePoster: 'https://m.media-amazon.com/images/M/MV5BMTJiMzg2ODgtNDhhMi00YmE3LWI3ZmEtOGUwYjFlOTFjYTZmXkEyXkFqcGc@._V1_SX300.jpg', tier: 'F', longReview: 'N',},
+      { id: 18, text: "The Conjuring", to: "/TheConjuring", name: "The Conjuring", moviePoster: 'https://m.media-amazon.com/images/M/MV5BMTM3NjA1NDMyMV5BMl5BanBnXkFtZTcwMDQzNDMzOQ@@._V1_SX300.jpg', tier: 'D', longReview: 'N',},
     ];
   const linksDataSorted = [...linksDataUnsorted].sort((a, b) => {
       return a.name.localeCompare(b.name);
@@ -85,6 +87,7 @@ function Home(props){
         <Route path="/AsAboveSoBelow" element={<AsAboveSoBelow name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/AvatarFireandAsh" element={<AvatarFireandAsh name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
         <Route path="/TheRuleofJennyPen" element={<TheRuleofJennyPen name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
+        <Route path="/TheConjuring" element={<TheConjuring name = {props.prevPath} age={props.setPrevPath} reinit={props.reinit} origMovName={origMovName}/>} />
       </Routes>
       <nav>
         <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>
