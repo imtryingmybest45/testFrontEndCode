@@ -16,10 +16,10 @@ function usePersistedState(key, defaultValue) {
   return [state, setState];
 }
 
-function TheRuleofJennyPenn(props){
+function TheRuleofJennyPen(props){
 
     const origMovName = props.origMovName;
-    const movName = "The Rule of Jenny Penn";
+    const movName = "The Rule of Jenny Pen";
     const movVal = "bad movie";
     const movTier = "F";
 
@@ -87,7 +87,7 @@ function TheRuleofJennyPenn(props){
     return(
         <div>
             {varVar && <h1>{movName}</h1>}
-            {varVar && <img src={'error'} alt="This is the movie poster for this movie."/>}
+            {varVar && <img src={'https://m.media-amazon.com/images/M/MV5BMTJiMzg2ODgtNDhhMi00YmE3LWI3ZmEtOGUwYjFlOTFjYTZmXkEyXkFqcGc@._V1_SX300.jpg'} alt="This is the movie poster for this movie."/>}
             {varVar && <pre className = "paragraphStylin">{movVal}</pre>}
             {!varVar &&<form onSubmit={handleSubmit}>
                 <label className="linkss">
@@ -109,4 +109,4 @@ function TheRuleofJennyPenn(props){
     )
 }
 
-export default TheRuleofJennyPenn;
+export default TheRuleofJennyPen;
