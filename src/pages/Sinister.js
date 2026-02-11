@@ -21,8 +21,8 @@ function Sinister(props){
 
     const origMovName = props.origMovName;
     const movName = "Sinister";
-    const movVal = "Amazing movie, 10/10";
-    const movTier = "S";
+    const movVal = "Amazing movie, 10/10, but not actually no its not";
+    const movTier = "F";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
