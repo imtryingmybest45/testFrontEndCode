@@ -45,7 +45,7 @@ function Home(props){
       { id: 9, text: "Annabelle Comes Home", to: "/AnnabelleComesHome", name: "Annabelle Comes Home", moviePoster: 'https://m.media-amazon.com/images/M/MV5BMjRjYmQ5NTQtYzIyNi00MmNlLTlmNjYtNjQ3NzRlZmY3YjFlXkEyXkFqcGc@._V1_SX300.jpg', tier: 'A', longReview: 'N',},
       { id: 10, text: "Good Boy", to: "/GoodBoy", name: "Good Boy", moviePoster: 'https://m.media-amazon.com/images/M/MV5BODJhM2JhYjktN2JlMC00YzVjLWI3NjctMTgzYjhhZDk3ZjU2XkEyXkFqcGc@._V1_SX300.jpg', tier: 'B', longReview: 'N',},
       { id: 11, text: "Black Phone 2", to: "/BlackPhone2", name: "Black Phone 2", moviePoster: 'https://m.media-amazon.com/images/M/MV5BMTVjMzNmZGYtOWU5NS00NDYzLThhZTktZGNlODIwYWVhMDRmXkEyXkFqcGc@._V1_SX300.jpg', tier: 'B', longReview: 'Y',},
-      { id: 12, text: "Kafds", to: "/Kafds", name: "Kafds", moviePoster: 'error', tier: 'B', longReview: 'N',},
+      { id: 12, text: "Kafds", to: "/Kafds", name: "Kafds", moviePoster: 'error', tier: 'B', longReview: 'Y',},
       { id: 13, text: "The Girl Next Door (2007)", to: "/TheGirlNextDoor2007", name: "The Girl Next Door (2007)", moviePoster: 'https://m.media-amazon.com/images/M/MV5BNTk4ZmI4YzctNTM5MC00YzY1LThjOTgtZjA5OTcwN2ZjNDFlXkEyXkFqcGdeQXVyMjE0MzE1MA@@._V1_SX300.jpg', tier: 'F', longReview: 'N',},
       { id: 14, text: "Black Phone", to: "/BlackPhone", name: "Black Phone", moviePoster: 'https://m.media-amazon.com/images/M/MV5BMjFhZTcxOTktMzllMS00MzIzLWJhODEtZDU5YTFkNzRjZWQyXkEyXkFqcGc@._V1_SX300.jpg', tier: 'NO', longReview: 'Y',},
       { id: 15, text: "Wow", to: "/Wow", name: "Wow", moviePoster: 'https://m.media-amazon.com/images/M/MV5BYWEyNjI2YWQtODk0NS00MzcxLWI3MTUtODI3YWYxOTA2ZTVhXkEyXkFqcGc@._V1_SX300.jpg', tier: 'A', longReview: 'N',},
