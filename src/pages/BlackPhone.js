@@ -20,7 +20,7 @@ function BlackPhone(props){
 
     const origMovName = props.origMovName;
     const movName = "Black Phone";
-    const movVal = "good movie";
+    const movVal = "good movie, would absolutely watch again, 10/10";
     const movTier = "NO";
 
     const [varVar, setVarVar] = useState(true);
