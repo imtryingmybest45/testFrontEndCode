@@ -20,8 +20,8 @@ function TheGirlNextDoor2007(props){
 
     const origMovName = props.origMovName;
     const movName = "The Girl Next Door (2007)";
-    const movVal = "bad movie";
-    const movTier = "F";
+    const movVal = "bad movie, do not watch, 0/10";
+    const movTier = "S";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
