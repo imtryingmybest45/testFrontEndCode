@@ -329,6 +329,10 @@
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
+.longReview{
+  border: 5px solid yellow;
+}
+
 
 
 @keyframes App-logo-spin {

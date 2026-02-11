@@ -26,11 +26,20 @@ function TierList(props){
             {Object.values(linksData).map(item => {
                 // Use a standard if/else block within the IIFE
                 if (item.tier === 'S') {
-                    return (
-                 <Link to={item.to}>
-                    <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick}></img>
-                </Link>
-                    );
+                    if (item.longReview ==='Y'){
+                        return (
+                        <Link to={item.to}>
+                            <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick} className = 'longReview'></img>
+                        </Link>
+                        );
+                    }
+                    else{
+                        return (
+                        <Link to={item.to}>
+                            <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick}></img>
+                        </Link>
+                        );
+                    }
                 } else {
                     return null; // Must return null or some other element if the condition is false
                 }
@@ -46,11 +55,20 @@ function TierList(props){
             {Object.values(linksData).map(item => {
                 // Use a standard if/else block within the IIFE
                 if (item.tier === 'A') {
-                    return (
-                    <Link to={item.to}>
-                        <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick}></img>
-                    </Link>
-                    );
+                    if (item.longReview ==='Y'){
+                        return (
+                        <Link to={item.to}>
+                            <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick} className = 'longReview'></img>
+                        </Link>
+                        );
+                    }
+                    else{
+                        return (
+                        <Link to={item.to}>
+                            <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick}></img>
+                        </Link>
+                        );
+                    }
                 } else {
                     return null; // Must return null or some other element if the condition is false
                 }
