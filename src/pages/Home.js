@@ -62,7 +62,7 @@ function Home(props){
     <div>
       {tfVar&&<h1>Welcome to my website.</h1>}
       {tfVar&&<img src={stoplizard} alt="This is a lizard that says STOP" />}
-      {false && <img>src={boo} alt={"hello"}</img>}
+      {false && <img src={boo} alt="hello"/>}
       {tfVar&&<h1 className="parStyl">ALERT: This is the scratch version of my website</h1>}
       {tfVar&&<h1 className="parStyl2">For the real version, go to <a href = "https://aprilshorrorcorner.com">aprilshorrorcorner.com</a></h1>}
       {tfVar&&<p>This is where I review horror movies.</p>}
