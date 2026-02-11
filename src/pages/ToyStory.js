@@ -21,8 +21,8 @@ function ToyStory(props){
 
     const origMovName = props.origMovName;
     const movName = "Toy Story";
-    const movVal = "Bad movie";
-    const movTier = "NO";
+    const movVal = "Bad movie, bad movie, bad move, bad movie";
+    const movTier = "S";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
