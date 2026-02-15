@@ -51,7 +51,7 @@ function Home(props){
       { id: 14, text: "Toy Story", to: "/ToyStory", name: "Toy Story", moviePoster: 'https://m.media-amazon.com/images/M/MV5BZTA3OWVjOWItNjE1NS00NzZiLWE1MjgtZDZhMWI1ZTlkNzYwXkEyXkFqcGc@._V1_SX300.jpg', tier: 'S', longReview: 'Y',},
       { id: 15, text: "The Aaarvdf", to: "/TheAaarvdf", name: "The Aaarvdf", moviePoster: boo, tier: 'A', longReview: 'Y',},
       { id: 16, text: "Child's Play", to: "/ChildsPlay", name: "Child's Play", moviePoster: boo, tier: 'A', longReview: 'N',},
-      { id: 17, text: "Wrong Turn", to: "/WrongTurn", name: "Wrong Turn", moviePoster: boo, tier: 'B', longReview: 'N',},
+      { id: 17, text: "Wrong Turn", to: "/WrongTurn", name: "Wrong Turn", moviePoster: 'https://m.media-amazon.com/images/M/MV5BYWM4MzNjMDctMGE2ZC00MTYwLWFhODEtNjU1OWE5ODA3YjhjXkEyXkFqcGc@._V1_SX300.jpg', tier: 'B', longReview: 'N',},
     ];
   const linksDataSorted = [...linksDataUnsorted].sort((a, b) => {
       return a.name.localeCompare(b.name);
