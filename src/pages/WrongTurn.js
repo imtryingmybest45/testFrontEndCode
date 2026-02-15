@@ -23,7 +23,7 @@ function WrongTurn(props){
     const movName = "Wrong Turn";
     const movVal = "Okay movie";
     const movTier = "B";
-    const movYear = "2021";
+    const movYear = "2029";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
@@ -91,7 +91,7 @@ function WrongTurn(props){
     return(
         <div>
             {varVar && <h1>{movName}</h1>}
-            {varVar && <img src={'https://m.media-amazon.com/images/M/MV5BYWM4MzNjMDctMGE2ZC00MTYwLWFhODEtNjU1OWE5ODA3YjhjXkEyXkFqcGc@._V1_SX300.jpg'} alt="This is the movie poster for this movie."/>}
+            {varVar && <img src={boo} alt="This is the movie poster for this movie."/>}
             {false && <img src={boo} alt="hello"/>}
             {varVar && <pre className = "paragraphStylin">{movVal}</pre>}
             {!varVar &&<form onSubmit={handleSubmit}>
