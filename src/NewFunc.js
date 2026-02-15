@@ -23,6 +23,7 @@ function NewFunc(props){
     const movName = "Insert movie name here";
     const movVal = "Insert movie review here";
     const movTier = "Insert Movie Tier here";
+    const movYear = "Insert movie year here";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
@@ -31,6 +32,7 @@ function NewFunc(props){
     const inputRef = useRef(null);
     const inputRef2 = useRef(null);
     const inputRef3 = useRef(null);
+    const inputRef4 = useRef(null);
 
     useLayoutEffect(() => {
         if (inputRef.current) {
@@ -44,7 +46,8 @@ function NewFunc(props){
         movieName: movName,
         movieReview: movVal,
         origMovName: origMovName,
-        movieTier: movTier
+        movieTier: movTier,
+        movieYear: movYear,
     });
 
     const handleChange = (e) => {
@@ -66,8 +69,8 @@ function NewFunc(props){
         }
         else{
         setMess("Please wait, your review is loading.");
-        axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
-        //axios.post('http://localhost:8080/editEndpoint',formData)
+        //axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
+        axios.post('http://localhost:8080/editEndpoint',formData)
         .then(response => setMess(response.data))
         }
     };
@@ -95,6 +98,10 @@ function NewFunc(props){
                 <label className="linkss">
                     Movie Name:
                     <textarea className = "custom-input" type="text" ref={inputRef} name="movieName" value={formData.movieName} onChange={handleChange} placeholder="Input movie name" />
+                </label>
+                <label className="linkss">
+                    Release Year:
+                    <textarea className = "custom-input" type="text" ref={inputRef4} name="movieYear" value={formData.movieYear} onChange={handleChange} placeholder="Input movie year" />
                 </label>
                 <label className="linkss">
                     Tier:
