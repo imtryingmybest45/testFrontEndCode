@@ -21,8 +21,9 @@ function ToyStory(props){
 
     const origMovName = props.origMovName;
     const movName = "Toy Story";
-    const movVal = "Bad movie, bad movie, bad move, bad movie";
-    const movTier = "S";
+    const movVal = "good movie";
+    const movTier = "A";
+    const movYear = "1995";
 
     const [varVar, setVarVar] = useState(true);
     let prevPath = props.name;
@@ -31,6 +32,7 @@ function ToyStory(props){
     const inputRef = useRef(null);
     const inputRef2 = useRef(null);
     const inputRef3 = useRef(null);
+    const inputRef4 = useRef(null);
 
     useLayoutEffect(() => {
         if (inputRef.current) {
@@ -44,7 +46,8 @@ function ToyStory(props){
         movieName: movName,
         movieReview: movVal,
         origMovName: origMovName,
-        movieTier: movTier
+        movieTier: movTier,
+        movieYear: movYear,
     });
 
     const handleChange = (e) => {
@@ -66,8 +69,8 @@ function ToyStory(props){
         }
         else{
         setMess("Please wait, your review is loading.");
-        axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
-        //axios.post('http://localhost:8080/editEndpoint',formData)
+        //axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
+        axios.post('http://localhost:8080/editEndpoint',formData)
         .then(response => setMess(response.data))
         }
     };
@@ -95,6 +98,10 @@ function ToyStory(props){
                 <label className="linkss">
                     Movie Name:
                     <textarea className = "custom-input" type="text" ref={inputRef} name="movieName" value={formData.movieName} onChange={handleChange} placeholder="Input movie name" />
+                </label>
+                <label className="linkss">
+                    Release Year:
+                    <textarea className = "custom-input" type="text" ref={inputRef4} name="movieYear" value={formData.movieYear} onChange={handleChange} placeholder="Input movie year" />
                 </label>
                 <label className="linkss">
                     Tier:
