@@ -1,17 +1,18 @@
-import Home from './pages/Home';
-import Admin from './pages/Admin';
-import EditPage from './pages/EditPage';
-import SubmissionPage from './pages/SubmissionPage';
-import OptionsPage from './pages/OptionsPage';
-import DeletePage from './pages/DeletePage';
-import Accolades from './pages/AccoladesPage';
-import TierList from './pages/TierList';
+import './App.css';
+import {useState, useEffect} from 'react';
+import { Link} from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import {Routes} from 'react-router-dom';
 import {Route} from 'react-router-dom';
-import {Link} from 'react-router-dom';
-import {useState} from 'react';
-import {useEffect} from 'react';
-import './App.css'
+import TesterPage from './pages/TesterPage';
+import Home from './pages/Home';
+import Admin from './pages/Admin';
+import TierList from './pages/TierList';
+import Accolades from './pages/Accolades';
+import OptionsPage from './pages/OptionsPage'
+import SubmissionPage from './pages/SubmissionPage';
+import EditPage from './pages/EditPage'
+import DeletePage from './pages/DeletePage'
 
 function usePersistedState(key, defaultValue) {
   // Initialize state with value from localStorage if available
@@ -28,76 +29,40 @@ function usePersistedState(key, defaultValue) {
   return [state, setState];
 }
 
-function App(){
+function App() {
 
-  const [ranVar, settfVar] = useState(true);
-  const [prevPath, setPrevPath] = usePersistedState('pathname',window.location.pathname);
-  const [links, setLinks] = usePersistedState('linkNames',[{id: "hello"},{id: "goodbye"}]);
-  const [origMovName, setOrigMovName] = useState('');
-
-  const userData = {name: ranVar, age: settfVar, prevPath: prevPath, setPrevPath: setPrevPath};
-
-  const homeClick = () => {
-    sessionStorage.removeItem('movInfo')
-    sessionStorage.removeItem('submitMovInfo')
-    settfVar(true)
-  }
-
-  const adminClick = () => {
-    sessionStorage.removeItem('movInfo')
-    sessionStorage.removeItem('submitMovInfo')
-  }
-
-  const handlePageLoad = () => {
-    if (window.location.pathname === "/" || window.location.pathname === "/*"){
-      settfVar(true);
-    }
-    else{
-      settfVar(false);
-    }
-  };
-
-  const handleBackButton = (event) => {
-    if (window.location.pathname === "/" || window.location.pathname === "/*"){
-      settfVar(true);
-    }
-    else{
-      settfVar(false);
-    }
-  };
+  const [usersApp, setUsersApp] = usePersistedState("object",{}); // 1. Initialize empty array
+  const [info, setInfo] = usePersistedState("object",{});
+  const navigate = useNavigate();
+  const { location } = window;
 
   useEffect(() => {
-    window.history.pushState(null, document.title, window.location.href);
-    window.addEventListener('popstate', handleBackButton);
-    return () => {
-      window.removeEventListener('popstate', handleBackButton);
-    };
-  }, []); // Empty dependency array ensures this runs once on mount/unmount
-
-  useEffect(() => {
-    handlePageLoad();
-  },[]); // The empty dependency array ensures this runs only once
+    if (location.pathname === '/'){
+      navigate('/Home', { replace: true });
+    }
+  }, [location.pathname]);
 
   return (
-    <div>
+    <div className="App">
       <nav className="top-left-div">
-        <Link to='*' onClick={homeClick}>Home</Link>
-        <Link to='/Admin' onClick={adminClick}>Admin</Link>
-        <Link to='/TierList' onClick={adminClick}>Tier List</Link>
-        <Link to='/Accolades' onClick={adminClick}>Accolades</Link>
+        <Link to="/Home">Home</Link>
+        <Link to="/Admin">Admin</Link>
+        <Link to="/TierList">Tier List</Link>
+        <Link to="/Accolades">Accolades</Link>
       </nav>
-      <Routes>
-        <Route path="*" element={<Home {...userData} linksStuff={setLinks} origMovName={origMovName}/>} />
-        <Route path ="/Admin" element={<Admin />}/>
-        <Route path ="/Accolades" element={<Accolades />}/>
-        <Route path ="/TierList" element={<TierList {...userData} linksData={links}/>}/>
-        <Route path ="/SubmissionPage" element={<SubmissionPage />}/>
-        <Route path ="/DeletePage" element={<DeletePage {...userData} linksData={links}/>}/>
-        <Route path ="/EditPage" element={<EditPage {...userData} linksData={links} setOrigMovName={setOrigMovName}/>}/>
-        <Route path ="/OptionsPage" element={<OptionsPage />}/>
-      </Routes>
+        <Routes>
+          <Route path='/Home' element={<Home setUsersApp={setUsersApp} setInfo={setInfo} />}/>
+          <Route path='/Admin' element={<Admin />}/>
+          <Route path='/TierList' element={<TierList setUsersApp={setUsersApp} usersApp={usersApp} setInfo={setInfo}/>}/>
+          <Route path='/Accolades' element={<Accolades />}/>
+          <Route path='/Options' element={<OptionsPage setUsersApp={setUsersApp}/>}/>
+          <Route path='/Submit' element={<SubmissionPage usersApp={usersApp}/>}/>
+          <Route path='/Edit' element={<EditPage setUsersApp={setUsersApp}/>}/>
+          <Route path='/Delete' element={<DeletePage />}/>
+          <Route path='/TesterPage' element={<TesterPage info={info} />} />
+        </Routes>
     </div>
   );
 }
 
-export default App
+export default App;

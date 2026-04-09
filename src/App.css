@@ -1,5 +1,6 @@
 .App {
-  text-align: center;
+  text-align: left;
+  font-family:'Times New Roman', Times, serif
 }
 
 .App-logo {
@@ -14,7 +15,7 @@
 }
 
 .App-header {
-  background-color: #0054fb;
+  background-color: #282c34;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -34,78 +35,55 @@
   gap: 10px;
 }
 
-.linkss {
-  display:flex;
-  /*width: 200px;*/
-  /*height: 60px;*/
-  width: 80vw;
-  height: 10vh;
-  flex-direction: column;
-}
-
-.linkss2 {
-  display:flex;
-  /*width: 900px;*/
-  width: 100vw;
-  /*height: 535px;*/
-  height: 70vh;
-  flex-direction: column;
-}
-
-.custom-input {
-  /* Set the desired height using standard CSS properties */
-  /*height: 200px;*/
-  width: 40vw;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.customInp {
-  /* Set the desired height using standard CSS properties */
-  /*height: 100px;*/
-  width: 90vw;
-  height: 65vh;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-}
-
-.wow {
+.submitForm{
   display: flex;
   gap: 10px;
 }
 
-.bbuton {
+.optionsButton {
   display: flex;
   flex-direction: row;
   gap: 10px;
 }
 
-.delStuff {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-}
-
-.paragraphStylin {
+.paragraphStyle {
   font-size:medium;
   font-family:'Times New Roman', Times, serif;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
 
-.parStyl {
-  font-size:x-large;
-  font-family:'Times New Roman', Times, serif;
-  white-space: pre-wrap;
-  word-wrap: break-word;
-  color:red;
+.links1{
+  display: flex;
+  width: 80vw;
+  height: 10vh;
+  flex-direction: column;
 }
 
-.parStyl2 {
-  font-size:x-large;
-  font-family:'Times New Roman', Times, serif;
-  white-space: pre-wrap;
-  word-wrap: break-word;
+.links2 {
+  display:flex;
+  width: 100vw;
+  height: 70vh;
+  flex-direction: column;
+}
+
+.custom-input {
+  width: 40vw;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.custom-input2 {
+  width: 90vw;
+  height: 65vh;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.buttonClass {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
 }
 
 .tierList {
@@ -252,7 +230,7 @@
   width: 80vw;
   margin-left: 1vw;
   margin-top: 1vw;
-  background-color:rgb(130, 74, 131);
+  background-color:rgb(149, 85, 150);
   flex-wrap: wrap; /* This property makes items wrap to the next line */
 }
 
@@ -329,10 +307,17 @@
   font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.longReview{
-  border: 5px solid yellow;
+.longReview1{
+  border: 2px solid rgb(255, 0, 153);
 }
 
+.longReview2{
+  border: 2px solid rgb(179, 0, 255);
+}
+
+.longReview{
+  border: 2px solid rgb(253, 184, 237);
+}
 
 
 @keyframes App-logo-spin {

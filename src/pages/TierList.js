@@ -1,19 +1,18 @@
 import { Link } from 'react-router-dom';
-import {useEffect} from 'react';
+import boo from './boo.png';
 
 function TierList(props){
 
-  let {linksData} = props;
-  let setTFVar = props.age;
-  let setPrevPath = props.setPrevPath;
+  let setInfo = props.setInfo;
+  const users = props.usersApp;
 
- const handleImageClick = () => {
-    setTFVar(false);
-  };
+    const handleError = (e) => {
+        e.currentTarget.src = boo;
+    };
 
- useEffect(() => {
-     setPrevPath("/TierList");
- },[setPrevPath]);
+    const logClick = (value) => {
+        setInfo(value)
+    };
 
   return (
     <div className = 'largeTierList'>
@@ -23,20 +22,20 @@ function TierList(props){
             <p className = 'theTierFont'>S</p>
         </div>
         <div className = 'sTierList'>
-            {Object.values(linksData).map(item => {
+            {Object.entries(users).map(([key,value]) => {
                 // Use a standard if/else block within the IIFE
-                if (item.tier === 'S') {
-                    if (item.longReview ==='Y'){
+                if (value.tier === 'S') {
+                    if (value.longReview ==='1'){
                         return (
-                        <Link to={item.to}>
-                            <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick} className = 'longReview'></img>
+                        <Link key={value.name} to={'/TesterPage'} onClick={()=>logClick(value)}>
+                            <img src={value.poster} alt={"hello"} className = 'longReview2' onError={handleError}></img>
                         </Link>
                         );
                     }
                     else{
                         return (
-                        <Link to={item.to}>
-                            <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick}></img>
+                        <Link key={value.name} to={'/TesterPage'} onClick={()=>logClick(value)}>
+                            <img src={value.poster} alt={"hello"} onError={handleError}></img>
                         </Link>
                         );
                     }
@@ -52,20 +51,20 @@ function TierList(props){
             <p className = 'theTierFont'>A</p>
         </div>
         <div className = 'aTierList'>
-            {Object.values(linksData).map(item => {
+            {Object.entries(users).map(([key,value]) => {
                 // Use a standard if/else block within the IIFE
-                if (item.tier === 'A') {
-                    if (item.longReview ==='Y'){
+                if (value.tier === 'A') {
+                    if (value.longReview ==='1'){
                         return (
-                        <Link to={item.to}>
-                            <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick} className = 'longReview'></img>
+                        <Link key={value.name} to={'/TesterPage'} onClick={()=>logClick(value)}>
+                            <img src={value.poster} alt={"hello"} className = 'longReview2' onError={handleError}></img>
                         </Link>
                         );
                     }
                     else{
                         return (
-                        <Link to={item.to}>
-                            <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick}></img>
+                        <Link key={value.name} to={'/TesterPage'} onClick={()=>logClick(value)}>
+                            <img src={value.poster} alt={"hello"} onError={handleError}></img>
                         </Link>
                         );
                     }
@@ -81,20 +80,20 @@ function TierList(props){
             <p className = 'theTierFont'>B</p>
         </div>
         <div className = 'bTierList'>
-            {Object.values(linksData).map(item => {
+            {Object.entries(users).map(([key,value]) => {
                 // Use a standard if/else block within the IIFE
-               if (item.tier === 'B') {
-                    if (item.longReview ==='Y'){
+                if (value.tier === 'B') {
+                    if (value.longReview ==='1'){
                         return (
-                        <Link to={item.to}>
-                            <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick} className = 'longReview'></img>
+                        <Link key={value.name} to={'/TesterPage'} onClick={()=>logClick(value)}>
+                            <img src={value.poster} alt={"hello"} className = 'longReview2' onError={handleError}></img>
                         </Link>
                         );
                     }
                     else{
                         return (
-                        <Link to={item.to}>
-                            <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick}></img>
+                        <Link key={value.name} to={'/TesterPage'} onClick={()=>logClick(value)}>
+                            <img src={value.poster} alt={"hello"} onError={handleError}></img>
                         </Link>
                         );
                     }
@@ -110,20 +109,20 @@ function TierList(props){
             <p className = 'theTierFont'>C</p>
         </div>
         <div className = 'cTierList'>
-            {Object.values(linksData).map(item => {
+            {Object.entries(users).map(([key,value]) => {
                 // Use a standard if/else block within the IIFE
-               if (item.tier === 'C') {
-                    if (item.longReview ==='Y'){
+                if (value.tier === 'C') {
+                    if (value.longReview ==='1'){
                         return (
-                        <Link to={item.to}>
-                            <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick} className = 'longReview'></img>
+                        <Link key={value.name} to={'/TesterPage'} onClick={()=>logClick(value)}>
+                            <img src={value.poster} alt={"hello"} className = 'longReview2' onError={handleError}></img>
                         </Link>
                         );
                     }
                     else{
                         return (
-                        <Link to={item.to}>
-                            <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick}></img>
+                        <Link key={value.name} to={'/TesterPage'} onClick={()=>logClick(value)}>
+                            <img src={value.poster} alt={"hello"} onError={handleError}></img>
                         </Link>
                         );
                     }
@@ -134,25 +133,25 @@ function TierList(props){
         </div>
       </div>
 
-    <div className ='tierList'>
+      <div className ='tierList'>
         <div className = 'dTier'>
             <p className = 'theTierFont'>D</p>
         </div>
         <div className = 'dTierList'>
-            {Object.values(linksData).map(item => {
+            {Object.entries(users).map(([key,value]) => {
                 // Use a standard if/else block within the IIFE
-                if (item.tier === 'D') {
-                    if (item.longReview ==='Y'){
+                if (value.tier === 'D') {
+                    if (value.longReview ==='1'){
                         return (
-                        <Link to={item.to}>
-                            <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick} className = 'longReview'></img>
+                        <Link key={value.name} to={'/TesterPage'} onClick={()=>logClick(value)}>
+                            <img src={value.poster} alt={"hello"} className = 'longReview2' onError={handleError}></img>
                         </Link>
                         );
                     }
                     else{
                         return (
-                        <Link to={item.to}>
-                            <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick}></img>
+                        <Link key={value.name} to={'/TesterPage'} onClick={()=>logClick(value)}>
+                            <img src={value.poster} alt={"hello"} onError={handleError}></img>
                         </Link>
                         );
                     }
@@ -163,25 +162,25 @@ function TierList(props){
         </div>
       </div>
 
-    <div className ='tierList'>
+      <div className ='tierList'>
         <div className = 'fTier'>
             <p className = 'theTierFont'>F</p>
         </div>
         <div className = 'fTierList'>
-            {Object.values(linksData).map(item => {
+            {Object.entries(users).map(([key,value]) => {
                 // Use a standard if/else block within the IIFE
-                if (item.tier === 'F') {
-                    if (item.longReview ==='Y'){
+                if (value.tier === 'F') {
+                    if (value.longReview ==='1'){
                         return (
-                        <Link to={item.to}>
-                            <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick} className = 'longReview'></img>
+                        <Link key={value.name} to={'/TesterPage'} onClick={()=>logClick(value)}>
+                            <img src={value.poster} alt={"hello"} className = 'longReview2' onError={handleError}></img>
                         </Link>
                         );
                     }
                     else{
                         return (
-                        <Link to={item.to}>
-                            <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick}></img>
+                        <Link key={value.name} to={'/TesterPage'} onClick={()=>logClick(value)}>
+                            <img src={value.poster} alt={"hello"} onError={handleError}></img>
                         </Link>
                         );
                     }
@@ -192,25 +191,25 @@ function TierList(props){
         </div>
       </div>
 
-    <div className ='tierList'>
+      <div className ='tierList'>
         <div className = 'noTier'>
-            <p className = 'theNoTierFont'>NO</p>
+            <p className = 'theTierFont'>NO</p>
         </div>
         <div className = 'noTierList'>
-            {Object.values(linksData).map(item => {
+            {Object.entries(users).map(([key,value]) => {
                 // Use a standard if/else block within the IIFE
-                if (item.tier === 'NO') {
-                    if (item.longReview ==='Y'){
+                if (value.tier === 'NO') {
+                    if (value.longReview ==='1'){
                         return (
-                        <Link to={item.to}>
-                            <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick} className = 'longReview'></img>
+                        <Link key={value.name} to={'/TesterPage'} onClick={()=>logClick(value)}>
+                            <img src={value.poster} alt={"hello"} className = 'longReview2' onError={handleError}></img>
                         </Link>
                         );
                     }
                     else{
                         return (
-                        <Link to={item.to}>
-                            <img src={item.moviePoster} alt={"hello"} onClick={handleImageClick}></img>
+                        <Link key={value.name} to={'/TesterPage'} onClick={()=>logClick(value)}>
+                            <img src={value.poster} alt={"hello"} onError={handleError}></img>
                         </Link>
                         );
                     }
@@ -219,7 +218,7 @@ function TierList(props){
                 }
             })}
         </div>
-    </div>
+      </div>
 
     </div>
   );

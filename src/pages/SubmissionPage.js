@@ -1,4 +1,5 @@
 import {useState,useLayoutEffect,useRef,useEffect} from 'react';
+import { useLocation } from 'react-router-dom';
 import axios from 'axios';
 import "../App.css"
 
@@ -23,6 +24,8 @@ function SubmissionPage(props){
     const inputRef2 = useRef(null);
     const inputRef3 = useRef(null);
     const inputRef4 = useRef(null);
+    const location = useLocation();
+    let usersApp = props.usersApp;
 
     useLayoutEffect(() => {
         if (inputRef.current) {
@@ -57,31 +60,52 @@ function SubmissionPage(props){
             setMess("Can only input S, A, B, C, D, F, or NO.")
         }
         else{
-        setMess("Please wait, your review is loading.");
-        //axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/submitEndpoint',formData)
-        axios.post('http://localhost:8080/submitEndpoint',formData)
-        .then(response => setMess(response.data))
+            setMess("Please wait, your review is loading.");
+            if (localStorage.editVar!=="true"){
+                axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/addEndpoint',formData)
+                //axios.post('http://localhost:8080/addEndpoint',formData)
+                .then(response => setMess(response.data))
+            }
+            else{
+                axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/editEndpoint',formData)
+                //axios.post('http://localhost:8080/editEndpoint',formData)
+                .then(response => setMess(response.data))
+                localStorage.setItem('editVar',false);
+            }
         }
     };
+
+    useEffect(() => {
+        if (localStorage.lastPath == '/Options'){
+            setFormData({movieName: '', movieReview: '', movieTier: '', movieYear: ''});
+            localStorage.setItem('lastPath', location.pathname);
+        }
+        if (localStorage.initVar==='false'){
+            localStorage.setItem('initVar',true);
+            if (typeof usersApp.name !== 'undefined'){
+                setFormData({movieName: props.usersApp.name, movieReview: props.usersApp.review, movieTier: props.usersApp.tier, movieYear: props.usersApp.year})
+            }
+        }
+    }, []);
 
       return (
         <div>
             <form onSubmit={handleSubmit}>
-                <label className="linkss">
+                <label className="links1">
                     Movie Name:
                     <textarea className = "custom-input" type="text" ref={inputRef} name="movieName" value={formData.movieName} onChange={handleChange} placeholder="Input movie name" />
                 </label>
-                <label className="linkss">
+                <label className="links1">
                     Release Year:
-                    <textarea className = "custom-input" type="text" ref={inputRef4} name="movieYear" value={formData.movieYear} onChange={handleChange} placeholder="Input movie year" />
+                    <textarea className = "custom-input" type="text" ref={inputRef4} name="movieYear" value={formData.movieYear} onChange={handleChange} placeholder="Input release year" />
                 </label>
-                <label className="linkss">
+                <label className="links1">
                     Tier:
                     <textarea className = "custom-input" type="text" ref={inputRef3} name="movieTier" value={formData.movieTier} onChange={handleChange} placeholder="Input movie tier" />
                 </label>
-                <label className="linkss2">
+                <label className="links2">
                     Movie Review:
-                    <textarea className = "customInp" type="text" ref={inputRef2} name="movieReview" value={formData.movieReview} onChange={handleChange} placeholder="Write movie review here"/>
+                    <textarea className = "custom-input2" type="text" ref={inputRef2} name="movieReview" value={formData.movieReview} onChange={handleChange} placeholder="Write movie review here"/>
                 </label>
                 <button type="submit">Submit</button>
                 <p>{stvar}</p>
