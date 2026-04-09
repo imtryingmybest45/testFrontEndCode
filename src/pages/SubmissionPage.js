@@ -76,7 +76,7 @@ function SubmissionPage(props){
     };
 
     useEffect(() => {
-        if (localStorage.lastPath == '/Options'){
+        if (localStorage.lastPath === '/Options'){
             setFormData({movieName: '', movieReview: '', movieTier: '', movieYear: ''});
             localStorage.setItem('lastPath', location.pathname);
         }
