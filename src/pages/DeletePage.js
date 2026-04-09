@@ -44,7 +44,8 @@ function DeletePage(){
     useEffect(() => {
       if (typeof location.initVar === 'undefined'){
         location.initVar = true;
-        axios.get('http://localhost:8080/submitEndpoint')
+        //axios.get('http://localhost:8080/submitEndpoint')
+        axios.get('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/submitEndpoint')
         .then(response => setUsers(({...response.data})))
       }
     }, []);
