@@ -1,7 +1,8 @@
 import axios from 'axios';
 import {useState, useEffect} from 'react';
 import { Link, useLocation} from 'react-router-dom';
-import boolizardprev12 from './boolizardprev12.png';
+//import boolizardprev12 from './boolizardprev12.png';
+import stopLizard from './stopLizard.png'
 
 function Home(props){
 
@@ -34,7 +35,7 @@ function Home(props){
     return (
     <div>
       <h1>Welcome to my website.</h1>
-      <img src={boolizardprev12} alt="This is a lizard that says BOO" />
+      <img src={stopLizard} alt="This is a lizard that says STOP" />
       <p>This is where I review horror movies.</p>
       <p>Click on a movie name to see the review.</p>
       <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>
