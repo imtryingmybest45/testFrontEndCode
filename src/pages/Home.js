@@ -35,7 +35,7 @@ function Home(props){
     return (
     <div>
       <h1>Welcome to my website.</h1>
-      <img src={stopLizard} alt="This is a lizard that says STOP" />
+      <img src={boolizardprev12} alt="This is a lizard that says BOO" />
       <p>This is where I review horror movies.</p>
       <p>Click on a movie name to see the review.</p>
       <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>
