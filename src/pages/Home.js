@@ -1,8 +1,8 @@
 import axios from 'axios';
 import {useState, useEffect} from 'react';
 import { Link, useLocation} from 'react-router-dom';
-//import boolizardprev12 from './boolizardprev12.png';
-import stopLizard from './stopLizard.png'
+import boolizardprev12 from './boolizardprev12.png';
+//import stopLizard from './stopLizard.png'
 
 function Home(props){
 
