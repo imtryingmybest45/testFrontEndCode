@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
 import boo from './boo.png';
+import {useState, useEffect} from 'react';
 
 function TierList(props){
 
   let setInfo = props.setInfo;
-  const users = props.usersApp;
+  //const users = props.usersApp;
+  const users = JSON.parse(localStorage.allData);
 
     const handleError = (e) => {
         e.currentTarget.src = boo;

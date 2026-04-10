@@ -17,6 +17,7 @@ function Home(props){
       const sortedEntries = Object.entries(users).sort(([keyA], [keyB]) => keyA.localeCompare(keyB));
       setSortedEntries(sortedEntries)}
       setUsersApp(users);
+      localStorage.setItem('allData',JSON.stringify(users));
     },[users])
 
     useEffect(() => {
