@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import boo from './boo.png';
-import {useState, useEffect} from 'react';
 
 function TierList(props){
 
