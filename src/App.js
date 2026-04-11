@@ -13,6 +13,10 @@ import OptionsPage from './pages/OptionsPage'
 import SubmissionPage from './pages/SubmissionPage';
 import EditPage from './pages/EditPage'
 import DeletePage from './pages/DeletePage'
+import WatchPage from './pages/WatchPage'
+import WatchTesterPage from './pages//WatchTesterPage'
+import WatchSubmissionPage from './pages/WatchSubmissionPage'
+import WatchDeletePage from './pages/WatchDeletePage'
 
 function usePersistedState(key, defaultValue) {
   // Initialize state with value from localStorage if available
@@ -33,6 +37,7 @@ function App() {
 
   const [usersApp, setUsersApp] = usePersistedState("object",{}); // 1. Initialize empty array
   const [info, setInfo] = usePersistedState("object",{});
+  const [watchInfo, setWatchInfo] = usePersistedState("watchObject",{});
   const navigate = useNavigate();
   const { location } = window;
 
@@ -48,6 +53,7 @@ function App() {
         <Link to="/Home">Home</Link>
         <Link to="/Admin">Admin</Link>
         <Link to="/TierList">Tier List</Link>
+        <Link to="/WatchList">Watchlist</Link>
         <Link to="/Accolades">Accolades</Link>
       </nav>
         <Routes>
@@ -60,6 +66,10 @@ function App() {
           <Route path='/Edit' element={<EditPage setUsersApp={setUsersApp}/>}/>
           <Route path='/Delete' element={<DeletePage />}/>
           <Route path='/TesterPage' element={<TesterPage info={info} />} />
+          <Route path='/WatchList' element={<WatchPage setWatchInfo={setWatchInfo}/>}/>
+          <Route path='/WatchTesterPage' element={<WatchTesterPage watchInfo={watchInfo}/>}/>
+          <Route path='/WatchSubmissionPage' element={<WatchSubmissionPage />}/>
+          <Route path='/WatchDeletePage' element={<WatchDeletePage />}/>
         </Routes>
     </div>
   );
