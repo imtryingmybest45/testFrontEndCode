@@ -29,7 +29,7 @@ function Home(props){
     //const [sortedEntries, setSortedEntries] = useState([]);
     const [sortedEntries, setSortedEntries] = usePersistedState('sortedState',[]);
     const location = useLocation();
-    const [lizardVar, setLizardVar] = useState(true);
+    //const [lizardVar, setLizardVar] = useState(true);
 
     useEffect(()=>{
       if (Object.keys(users).length>0){
@@ -47,7 +47,7 @@ function Home(props){
         //axios.get('http://localhost:8080/submitEndpoint')
         axios.get('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/submitEndpoint')
         .then(response => setUsers(({...response.data})))
-        setLizardVar(false);
+        //setLizardVar(false);
       }
     }, []);
 
@@ -61,7 +61,6 @@ function Home(props){
       <img src={boolizardprev12} alt="This is a lizard that says BOO" />
       <p>This is where I review horror movies.</p>
       <p>Click on a movie name to see the review.</p>
-      {lizardVar && <img src = {boolizardprev12}/>}
       <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>
         {sortedEntries.map(([key,value])=><li key={value.movieId}><Link key={value.movieId} to={'/TesterPage'} onClick={()=>logClick(value)}>{value.name}</Link></li>)}
       </ul>
