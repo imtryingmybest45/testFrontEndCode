@@ -24,6 +24,7 @@ function SubmissionPage(props){
     const inputRef2 = useRef(null);
     const inputRef3 = useRef(null);
     const inputRef4 = useRef(null);
+    const inputRef5 = useRef(null);
     const location = useLocation();
     let usersApp = props.usersApp;
 
@@ -40,6 +41,7 @@ function SubmissionPage(props){
         movieReview: '',
         movieTier: '',
         movieYear: '',
+        movieRating: ''
     })
 
     const handleChange = (e) => {
@@ -53,10 +55,7 @@ function SubmissionPage(props){
     const handleSubmit = (e) => {
         e.preventDefault(); // Prevents default form submission behavior (page reload)
         const allowedStrings = ['S', 'A', 'B', 'C', 'D', 'F', 'NO'];
-        if(/^[a-z]/.test(formData.movieName)){
-            setMess("First word of movie name must be uppercase.")
-        }
-        else if (!allowedStrings.includes(formData.movieTier)){
+        if (!allowedStrings.includes(formData.movieTier)){
             setMess("Can only input S, A, B, C, D, F, or NO.")
         }
         else{
@@ -77,13 +76,13 @@ function SubmissionPage(props){
 
     useEffect(() => {
         if (localStorage.lastPath === '/Options'){
-            setFormData({movieName: '', movieReview: '', movieTier: '', movieYear: ''});
+            setFormData({movieName: '', movieReview: '', movieTier: '', movieYear: '',movieRating: ''});
             localStorage.setItem('lastPath', location.pathname);
         }
         if (localStorage.initVar==='false'){
             localStorage.setItem('initVar',true);
             if (typeof usersApp.name !== 'undefined'){
-                setFormData({movieName: props.usersApp.name, movieReview: props.usersApp.review, movieTier: props.usersApp.tier, movieYear: props.usersApp.year})
+                setFormData({movieName: props.usersApp.name, movieReview: props.usersApp.review, movieTier: props.usersApp.tier, movieYear: props.usersApp.year, movieRating: props.usersApp.rating})
             }
         }
     }, []);
@@ -98,6 +97,10 @@ function SubmissionPage(props){
                 <label className="links1">
                     Release Year:
                     <textarea className = "custom-input" type="text" ref={inputRef4} name="movieYear" value={formData.movieYear} onChange={handleChange} placeholder="Input release year" />
+                </label>
+                 <label className="links1">
+                    Rating:
+                    <textarea className = "custom-input" type="text" ref={inputRef5} name="movieRating" value={formData.movieRating} onChange={handleChange} placeholder="Input movie rating (out of 10)" />
                 </label>
                 <label className="links1">
                     Tier:
