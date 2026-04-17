@@ -26,7 +26,7 @@ function TierList(props){
             {Object.entries(users).map(([key,value]) => {
                 // Use a standard if/else block within the IIFE
                 if (value.tier === 'S') {
-                    if (value.longReview ==='1'){
+                    if (value.fullReview ==='1'){
                         return (
                         <Link key={value.name} to={'/TesterPage'} onClick={()=>logClick(value)}>
                             <img src={value.poster} alt={"hello"} className = 'longReview2' onError={handleError}></img>
@@ -55,10 +55,10 @@ function TierList(props){
             {Object.entries(users).map(([key,value]) => {
                 // Use a standard if/else block within the IIFE
                 if (value.tier === 'A') {
-                    if (value.longReview ==='1'){
+                    if (value.fullReview ==='1'){
                         return (
                         <Link key={value.name} to={'/TesterPage'} onClick={()=>logClick(value)}>
-                            <img src={value.poster} alt={"hello"} className = 'longReview2' onError={handleError}></img>
+                            <img src={value.poster} alt={"hello"} className = 'longReview1' onError={handleError}></img>
                         </Link>
                         );
                     }
@@ -84,7 +84,7 @@ function TierList(props){
             {Object.entries(users).map(([key,value]) => {
                 // Use a standard if/else block within the IIFE
                 if (value.tier === 'B') {
-                    if (value.longReview ==='1'){
+                    if (value.fullReview ==='1'){
                         return (
                         <Link key={value.name} to={'/TesterPage'} onClick={()=>logClick(value)}>
                             <img src={value.poster} alt={"hello"} className = 'longReview2' onError={handleError}></img>
@@ -113,10 +113,10 @@ function TierList(props){
             {Object.entries(users).map(([key,value]) => {
                 // Use a standard if/else block within the IIFE
                 if (value.tier === 'C') {
-                    if (value.longReview ==='1'){
+                    if (value.fullReview ==='1'){
                         return (
                         <Link key={value.name} to={'/TesterPage'} onClick={()=>logClick(value)}>
-                            <img src={value.poster} alt={"hello"} className = 'longReview2' onError={handleError}></img>
+                            <img src={value.poster} alt={"hello"} className = 'longReview1' onError={handleError}></img>
                         </Link>
                         );
                     }
@@ -142,7 +142,7 @@ function TierList(props){
             {Object.entries(users).map(([key,value]) => {
                 // Use a standard if/else block within the IIFE
                 if (value.tier === 'D') {
-                    if (value.longReview ==='1'){
+                    if (value.fullReview ==='1'){
                         return (
                         <Link key={value.name} to={'/TesterPage'} onClick={()=>logClick(value)}>
                             <img src={value.poster} alt={"hello"} className = 'longReview2' onError={handleError}></img>
@@ -171,10 +171,10 @@ function TierList(props){
             {Object.entries(users).map(([key,value]) => {
                 // Use a standard if/else block within the IIFE
                 if (value.tier === 'F') {
-                    if (value.longReview ==='1'){
+                    if (value.fullReview ==='1'){
                         return (
                         <Link key={value.name} to={'/TesterPage'} onClick={()=>logClick(value)}>
-                            <img src={value.poster} alt={"hello"} className = 'longReview2' onError={handleError}></img>
+                            <img src={value.poster} alt={"hello"} className = 'longReview1' onError={handleError}></img>
                         </Link>
                         );
                     }
@@ -200,7 +200,7 @@ function TierList(props){
             {Object.entries(users).map(([key,value]) => {
                 // Use a standard if/else block within the IIFE
                 if (value.tier === 'NO') {
-                    if (value.longReview ==='1'){
+                    if (value.fullReview ==='1'){
                         return (
                         <Link key={value.name} to={'/TesterPage'} onClick={()=>logClick(value)}>
                             <img src={value.poster} alt={"hello"} className = 'longReview2' onError={handleError}></img>

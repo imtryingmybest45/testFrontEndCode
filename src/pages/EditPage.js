@@ -28,6 +28,7 @@ function EditPage(props){
 
     const logClick = (value) => {
         localStorage.setItem('initVar',false);
+        //set local storage to session storage for editVar
         localStorage.setItem('editVar',true);
         setUsersApp(value);
     };
