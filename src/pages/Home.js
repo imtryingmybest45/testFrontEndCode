@@ -29,12 +29,14 @@ function Home(props){
     //const [sortedEntries, setSortedEntries] = useState([]);
     const [sortedEntries, setSortedEntries] = usePersistedState('sortedState',[]);
     const location = useLocation();
+    //const [lizardVar, setLizardVar] = usePersistedState('lizard',true);
     const [lizardVar, setLizardVar] = usePersistedState('lizard',true);
 
     useEffect(()=>{
       if (Object.keys(users).length>0){
         const sortedEntries = Object.entries(users).sort(([keyA], [keyB]) => keyA.localeCompare(keyB));
         setSortedEntries(sortedEntries)
+        setLizardVar(false);
       }
       setUsersApp(users);
       localStorage.setItem('allData',JSON.stringify(users));
@@ -47,7 +49,7 @@ function Home(props){
         //axios.get('http://localhost:8080/submitEndpoint')
         axios.get('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/submitEndpoint')
         .then(response => setUsers(({...response.data})))
-        .then(setLizardVar(false));
+        //.then(setLizardVar(false));
       }
     }, []);
 
