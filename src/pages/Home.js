@@ -29,7 +29,7 @@ function Home(props){
     //const [sortedEntries, setSortedEntries] = useState([]);
     const [sortedEntries, setSortedEntries] = usePersistedState('sortedState',[]);
     const location = useLocation();
-    const [lizardVar, setLizardVar] = useState(true);
+    const [lizardVar, setLizardVar] = usePersistedState('lizard',true);
 
     useEffect(()=>{
       if (Object.keys(users).length>0){
