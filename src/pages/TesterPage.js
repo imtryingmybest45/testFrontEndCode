@@ -1,4 +1,5 @@
 import boo from './boo.png';
+import {useEffect} from 'react';
 
 function TesterPage(props){
 
@@ -11,6 +12,11 @@ function TesterPage(props){
   const handleError = (e) => {
         e.currentTarget.src = boo;
     };
+
+  useEffect(() => {
+    window.scrollTo(0,0);
+  }, []);
+
 
   return (
     <div>
