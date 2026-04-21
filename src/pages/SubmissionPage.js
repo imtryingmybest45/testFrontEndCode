@@ -41,7 +41,8 @@ function SubmissionPage(props){
         movieReview: '',
         movieTier: '',
         movieYear: '',
-        movieRating: ''
+        movieRating: '',
+        movieId: '',
     })
 
     const handleChange = (e) => {
@@ -82,7 +83,7 @@ function SubmissionPage(props){
         if (localStorage.initVar==='false'){
             localStorage.setItem('initVar',true);
             if (typeof usersApp.name !== 'undefined'){
-                setFormData({movieName: props.usersApp.name, movieReview: props.usersApp.review, movieTier: props.usersApp.tier, movieYear: props.usersApp.year, movieRating: props.usersApp.rating})
+                setFormData({movieName: props.usersApp.name, movieReview: props.usersApp.review, movieTier: props.usersApp.tier, movieYear: props.usersApp.year, movieRating: props.usersApp.rating, movieId: props.usersApp.movieId})
             }
         }
     }, []);
