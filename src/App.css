@@ -316,6 +316,23 @@
   height: auto;
 }
 
+.watchList{
+  display: flex;
+  width: 80vw;
+  margin-left: 1vw;
+  margin-top: 1vw;
+  flex-wrap: wrap; /* This property makes items wrap to the next line */
+}
+
+.watchList img{
+ /* Optional: ensures images fit within their container */
+  /*max-width: 10%;*/
+  max-width: 100%;
+  max-height: auto;
+  width: 100px;
+  height: auto;
+}
+
 .theTierFont{
   font-size:3cap;
   color:rgb(255, 255, 255);

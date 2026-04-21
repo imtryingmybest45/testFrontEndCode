@@ -1,7 +1,7 @@
 import axios from 'axios';
 import {useState, useEffect} from 'react';
 import { Link, useLocation, useNavigate} from 'react-router-dom';
-//import stopLizard from './stopLizard.png'
+import boo from './boo.png'
 
 function usePersistedState(key, defaultValue) {
   // Initialize state with value from localStorage if available
@@ -57,14 +57,18 @@ function WatchPage(props){
         navigate("/WatchDeletePage");
     };
 
+    const handleError = (e) => {
+        e.currentTarget.src = boo;
+    };
+
     return (
     <div>
       <h1>Welcome to the watchlist page.</h1>
       <p>This is where you can list movies you want to watch.</p>
-      <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>
-        {watchSortedEntries.map(([key,value])=><li key={value.name}><Link key={value.name} to={'/WatchTesterPage'} onClick={()=>logClick(value)}>{value.name}</Link></li>)}
-      </ul>
-      <div className="watchButton">
+      <div className='watchList'>
+        {watchSortedEntries.map(([key,value])=><Link key={value.name} to={'/WatchTesterPage'} onClick={()=>logClick(value)}><img src={value.poster} onError={handleError} alt = 'hello'></img></Link>)}
+     </div>
+     <div className="watchButton">
         <button onClick={buttonClick}>Add movie</button>
         <button onClick={buttonClick2}>Delete movie</button>
     </div>
