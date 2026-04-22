@@ -17,6 +17,7 @@ import WatchPage from './pages/WatchPage'
 import WatchTesterPage from './pages//WatchTesterPage'
 import WatchSubmissionPage from './pages/WatchSubmissionPage'
 import WatchDeletePage from './pages/WatchDeletePage'
+import WatchEditPage from './pages/WatchEditPage'
 
 function usePersistedState(key, defaultValue) {
   // Initialize state with value from localStorage if available
@@ -68,7 +69,8 @@ function App() {
           <Route path='/TesterPage' element={<TesterPage info={info} />} />
           <Route path='/WatchList' element={<WatchPage setWatchInfo={setWatchInfo}/>}/>
           <Route path='/WatchTesterPage' element={<WatchTesterPage watchInfo={watchInfo}/>}/>
-          <Route path='/WatchSubmissionPage' element={<WatchSubmissionPage />}/>
+          <Route path='/WatchSubmissionPage' element={<WatchSubmissionPage watchInfo={watchInfo}/>}/>
+          <Route path='/WatchEditPage' element={<WatchEditPage setWatchInfo={setWatchInfo}/>}/>
           <Route path='/WatchDeletePage' element={<WatchDeletePage />}/>
         </Routes>
     </div>

@@ -2,12 +2,27 @@ import {useState,useLayoutEffect,useRef,useEffect} from 'react';
 import axios from 'axios';
 import "../App.css"
 
-function WatchSubmissionPage(){
+function usePersistedState(key, defaultValue) {
+  // Initialize state with value from localStorage if available
+  const [state, setState] = useState(() => {
+    const storedValue = sessionStorage.getItem(key);
+    return storedValue ? JSON.parse(storedValue) : defaultValue;
+  });
+
+  // Update localStorage whenever the state changes
+  useEffect(() => {
+    sessionStorage.setItem(key, JSON.stringify(state));
+  }, [key, state]);
+  return [state, setState];
+}
+
+function WatchSubmissionPage(props){
     
     const value = '';
     const inputRef = useRef(null);
     const inputRef2 = useRef(null);
     const inputRef4 = useRef(null);
+    let watchInfo = props.watchInfo;
 
     useLayoutEffect(() => {
         if (inputRef.current) {
@@ -17,10 +32,11 @@ function WatchSubmissionPage(){
     }, [value]); // Re-run when the value changes
 
     const [stvar, setMess] = useState('');
-    const [watchFormData, setWatchFormData] = useState({
+    const [watchFormData, setWatchFormData] = usePersistedState('wowow',{
         movieName: '',
         movieBlurb: '',
-        movieYear: ''
+        movieYear: '',
+        movieId: ''
     })
 
     const handleChange = (e) => {
@@ -34,10 +50,31 @@ function WatchSubmissionPage(){
     const handleSubmit = (e) => {
         e.preventDefault(); // Prevents default form submission behavior (page reload)
         setMess("Please wait, your watch recommendation is loading.");
+        if (localStorage.watchEditVar !== "true"){
             axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/watchSubEndpoint',watchFormData)
             //axios.post('http://localhost:8080/watchSubEndpoint',watchFormData)
             .then(response => setMess(response.data))
+        }
+        else{
+            axios.post('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/watchEditEndpoint',watchFormData)
+                //axios.post('http://localhost:8080/watchEditEndpoint',watchFormData)
+                .then(response => setMess(response.data))
+                localStorage.setItem('watchEditVar',false);
+        }
         };
+
+    useEffect(() => {
+        if (localStorage.lastWatchPath === '/WatchList'){
+            setWatchFormData({movieName: '', movieBlurb: '', movieYear: ''});
+            localStorage.setItem('lastWatchPath', location.pathname);
+        }
+        if (localStorage.watchInitVar==='false'){
+            localStorage.setItem('watchInitVar',true);
+            if (typeof watchInfo.name !== 'undefined'){
+                setWatchFormData({movieName: watchInfo.name, movieBlurb: watchInfo.blurb, movieYear: watchInfo.year, movieId: watchInfo.movieId})
+            }
+        }
+    }, []);
 
       return (
         <div>

@@ -47,6 +47,7 @@ function WatchPage(props){
 
     const logClick = (value) => {
       setWatchInfo(value)
+      console.log(value);
     };
 
     const buttonClick = () => {
@@ -57,9 +58,18 @@ function WatchPage(props){
         navigate("/WatchDeletePage");
     };
 
+    const buttonClick3 = () => {
+      navigate("/WatchEditPage");
+    };
+
     const handleError = (e) => {
         e.currentTarget.src = boo;
     };
+
+    useEffect(() => {
+    // Save current path to localStorage on every change
+        localStorage.setItem('lastWatchPath', location.pathname);
+    }, [location]);
 
     return (
     <div>
@@ -70,6 +80,7 @@ function WatchPage(props){
      </div>
      <div className="watchButton">
         <button onClick={buttonClick}>Add movie</button>
+        <button onClick={buttonClick3}>Edit movie</button>
         <button onClick={buttonClick2}>Delete movie</button>
     </div>
     </div>
