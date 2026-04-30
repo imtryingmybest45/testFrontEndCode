@@ -96,7 +96,7 @@ function Home(props){
         {sortedEntries.map(([key,value])=><li key={value.movieId}><Link key={value.movieId} to={'/TesterPage'} onClick={()=>logClick(value)}>{value.name}</Link></li>)}
       </ul>
       <div className='top-right-class'>
-        {!lizardVar&& <input 
+        {!lizardVar&& <input className = 'searchBox' 
             type="text" 
             placeholder="Search..." 
             value={query} 

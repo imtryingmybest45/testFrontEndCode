@@ -358,12 +358,19 @@
 }
 
 .top-right-class{
+  display:flex;
+  flex-direction: column;
+  align-items: flex-end;
   position: absolute;
-  top: 0.5vw;
-  right: 1vw;
   background-color: white;
+  top: 0.6vw;
+  right: 1vw;
 }
 
+.searchBox{
+  width: 50%;
+  height: 20px;
+}
 
 @keyframes App-logo-spin {
   from {
