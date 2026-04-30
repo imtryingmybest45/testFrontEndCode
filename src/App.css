@@ -357,6 +357,13 @@
   border: 2px solid rgb(253, 184, 237);
 }
 
+.top-right-class{
+  position: absolute;
+  top: 0.5vw;
+  right: 65vw;
+  background-color: white;
+}
+
 
 @keyframes App-logo-spin {
   from {
