@@ -39,7 +39,7 @@
 .top-left-div {
   display: flex;
   flex-direction: row;
-  gap: 10px;
+  gap: 7px;
 }
 
 .submitForm{
