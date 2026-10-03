@@ -27,6 +27,7 @@ function Home(props){
     let setInfo = props.setInfo;
     const [users,setUsers] = usePersistedState('userState',{});
     const [sortedEntries, setSortedEntries] = usePersistedState('sortedState',[]);
+    const [numMovies, setNumMovies] = usePersistedState('numMoviesState','19');
     const location = useLocation();
     const [lizardVar, setLizardVar] = usePersistedState('lizard',true);
     const [query, setQuery] = useState("");
@@ -48,9 +49,27 @@ function Home(props){
       if (typeof location.initVar === 'undefined'){
         location.initVar = true;
         sessionStorage.refreshVar = false; //added now
+        const requests = [
+          //axios.get('http://localhost:8080/submitEndpoint')
+          axios.get('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/submitEndpoint')
+            .then(response => {return setUsers(({...response.data}))}),
+
+            //axios.get('http://localhost:8080/numMoviesEndpoint')
+            axios.get('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/numMoviesEndpoint')
+            .then(response => {return setNumMovies(response.data)}),
+        ];
+        Promise.all(requests)
+        .then((allResults) => {
+          // allResults contains the data returned from each individual .then() block
+          console.log('All requests finished successfully:', allResults);
+        })
+        .catch((error) => {
+          // If ANY of the requests (or .then blocks) fail, execution jumps here
+          console.error('One or more requests failed:', error);
+        });
         //axios.get('http://localhost:8080/submitEndpoint')
-        axios.get('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/submitEndpoint')
-        .then(response => setUsers(({...response.data})))
+        //axios.get('https://testhelpme-cfh4afcpdreacnh8.canadacentral-01.azurewebsites.net/submitEndpoint')
+        //.then(response => setUsers(({...response.data})))
       }
     }, []);
 
@@ -90,6 +109,7 @@ function Home(props){
       {lizardVar && <p>Loading...</p>}
       {!lizardVar && <img src={boolizardprev12} alt="This is a lizard that says BOO" />}
       {!lizardVar && <p>This is where I review horror movies.</p>}
+      {!lizardVar && <p>As of today, I have reviewed <strong>{numMovies}</strong> movies.</p>}
       {!lizardVar && <p>Click on a movie name to see the review.</p>}
       {lizardVar&&<img src = 'https://media.tenor.com/MI5DzBmG4V8AAAAM/tom-lizard.gif'/>}
       <ul style={{listStyleType: 'none',  padding: "0", margin: "0"}}>
