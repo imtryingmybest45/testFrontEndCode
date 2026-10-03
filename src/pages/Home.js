@@ -27,7 +27,7 @@ function Home(props){
     let setInfo = props.setInfo;
     const [users,setUsers] = usePersistedState('userState',{});
     const [sortedEntries, setSortedEntries] = usePersistedState('sortedState',[]);
-    const [numMovies, setNumMovies] = usePersistedState('numMoviesState','19');
+    const [numMovies, setNumMovies] = usePersistedState('numMoviesState','');
     const location = useLocation();
     const [lizardVar, setLizardVar] = usePersistedState('lizard',true);
     const [query, setQuery] = useState("");
